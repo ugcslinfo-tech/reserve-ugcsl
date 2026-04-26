@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import rateLimit from 'express-rate-limit';
+import rateLimit, { ipKeyGenerator } from 'express-rate-limit';
 import cookieParser from 'cookie-parser';
 import { randomBytes } from 'crypto';
 import contactRoutes from './routes/contact';
@@ -29,7 +29,10 @@ const limiter = rateLimit({
   max: 100,
   standardHeaders: true,
   legacyHeaders: false,
-  keyGenerator: (req) => req.headers['x-forwarded-for']?.toString().split(',')[0] ?? req.ip ?? 'unknown',
+  keyGenerator: (req) => {
+    const forwarded = req.headers['x-forwarded-for']?.toString().split(',')[0].trim();
+    return forwarded ?? ipKeyGenerator(req.ip ?? '');
+  },
 });
 app.use('/api', limiter);
 

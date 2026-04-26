@@ -2,9 +2,18 @@ import { Router, Request, Response } from 'express';
 import { body, validationResult } from 'express-validator';
 import { timingSafeEqual } from 'crypto';
 import rateLimit from 'express-rate-limit';
+import nodemailer from 'nodemailer';
 import Contact from '../models/Contact';
 
 const router = Router();
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
@@ -43,6 +52,25 @@ router.post('/', contactLimiter, validate, async (req: Request, res: Response) =
   try {
     const { name, email, phone, subject, message } = req.body;
     await Contact.create({ name, email, phone, subject, message });
+
+    // Send email notification — non-blocking, don't fail the request if email fails
+    transporter.sendMail({
+      from: `"UGCSL Contact Form" <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER,
+      replyTo: email,
+      subject: `[UGCSL Contact] ${subject}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <table cellpadding="6">
+          <tr><td><strong>Name</strong></td><td>${name}</td></tr>
+          <tr><td><strong>Email</strong></td><td>${email}</td></tr>
+          ${phone ? `<tr><td><strong>Phone</strong></td><td>${phone}</td></tr>` : ''}
+          <tr><td><strong>Subject</strong></td><td>${subject}</td></tr>
+          <tr><td><strong>Message</strong></td><td>${message}</td></tr>
+        </table>
+      `,
+    }).catch((err) => console.error('Email send failed:', err));
+
     res.status(201).json({ success: true, message: 'Message sent successfully!' });
   } catch {
     res.status(500).json({ success: false, message: 'Failed to send message.' });
