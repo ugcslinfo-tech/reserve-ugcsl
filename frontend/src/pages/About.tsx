@@ -1,29 +1,48 @@
 import { Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import banner from '../assets/campus/banner.jpeg';
 import './shared.css';
 import './About.css';
 
 const roadmapYears = ['2025', '2026', '2027', '2028'];
-const CARDS_PER_VIEW = 3;
 const CARD_GAP = 24;
+
+function getCardsPerView() {
+  if (typeof window === 'undefined') return 3;
+  if (window.innerWidth < 560) return 1;
+  if (window.innerWidth < 900) return 2;
+  return 3;
+}
 
 export default function About() {
   const { t } = useTranslation();
   const objectives = t('about.objectives', { returnObjects: true }) as string[];
   const roadmap = t('about.roadmap', { returnObjects: true }) as string[];
   const board = t('about.board', { returnObjects: true }) as { name: string; role: string; bio: string; photo: string | null }[];
+
+  const [cardsPerView, setCardsPerView] = useState(getCardsPerView);
   const [carouselIndex, setCarouselIndex] = useState(0);
   const trackWrapRef = useRef<HTMLDivElement>(null);
-  const maxIndex = Math.max(0, board.length - CARDS_PER_VIEW);
+
+  useEffect(() => {
+    const onResize = () => {
+      const next = getCardsPerView();
+      setCardsPerView(next);
+      setCarouselIndex(0);
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+  const maxIndex = Math.max(0, board.length - cardsPerView);
   const prev = () => setCarouselIndex((i) => Math.max(0, i - 1));
   const next = () => setCarouselIndex((i) => Math.min(maxIndex, i + 1));
 
   const getOffset = () => {
     const wrap = trackWrapRef.current;
     if (!wrap) return 0;
-    const cardW = (wrap.offsetWidth - CARD_GAP * (CARDS_PER_VIEW - 1)) / CARDS_PER_VIEW;
+    const cardW = (wrap.offsetWidth - CARD_GAP * (cardsPerView - 1)) / cardsPerView;
     return carouselIndex * (cardW + CARD_GAP);
   };
 
