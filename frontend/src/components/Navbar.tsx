@@ -17,10 +17,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const { t, i18n } = useTranslation();
-  const isSinhala = i18n.language === 'si';
-
-  const toggleLang = () => i18n.changeLanguage(isSinhala ? 'en' : 'si');
+  const { t } = useTranslation();
+  // const { t, i18n } = useTranslation();
+  // const isSinhala = i18n.language === 'si';
+  // const toggleLang = () => i18n.changeLanguage(isSinhala ? 'en' : 'si');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -58,10 +58,12 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-right">
+          {/* Language toggle — hidden until Sinhala locale is re-enabled
           <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
             <span className="lang-globe">🌐</span>
             <span className="lang-label">{isSinhala ? 'සිං' : 'EN'}</span>
           </button>
+          */}
           <button
             className={`hamburger ${menuOpen ? 'open' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
