@@ -10,8 +10,7 @@ export default function About() {
   const { t } = useTranslation();
   const objectives = t('about.objectives', { returnObjects: true }) as string[];
   const roadmap = t('about.roadmap', { returnObjects: true }) as string[];
-  const board = t('about.board', { returnObjects: true }) as { name: string; role: string; bio: string; icon: string }[];
-  const academic = t('about.academic', { returnObjects: true }) as { name: string; role: string; bio: string; icon: string }[];
+  const board = t('about.board', { returnObjects: true }) as { name: string; role: string; bio: string; photo: string | null }[];
 
   return (
     <main className="about-page">
@@ -60,13 +59,20 @@ export default function About() {
             <h2 className="section-title">{t('about.boardTitle')}</h2>
             <p className="section-subtitle">{t('about.boardSubtitle')}</p>
           </div>
-          <div className="staff-grid">
+          <div className="board-grid">
             {board.map((member, i) => (
-              <div key={i} className="staff-card card">
-                <div className="staff-avatar">{member.icon}</div>
-                <h4>{member.name}</h4>
-                <p className="staff-role">{member.role}</p>
-                <p className="staff-bio">{member.bio}</p>
+              <div key={i} className="board-card card">
+                <div className="board-photo-wrap">
+                  {member.photo
+                    ? <img src={member.photo} alt={member.name} className="board-photo" />
+                    : <div className="board-photo-placeholder">👤</div>
+                  }
+                </div>
+                <div className="board-info">
+                  <h4>{member.name}</h4>
+                  <p className="board-role">{member.role}</p>
+                  <p className="board-bio">{member.bio}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -81,24 +87,11 @@ export default function About() {
             <h2 className="section-title">{t('about.academicTitle')}</h2>
             <p className="section-subtitle">{t('about.academicSubtitle')}</p>
           </div>
-          {Array.isArray(academic) && academic.length > 0 ? (
-            <div className="staff-grid">
-              {academic.map((member, i) => (
-                <div key={i} className="staff-card card">
-                  <div className="staff-avatar">{member.icon}</div>
-                  <h4>{member.name}</h4>
-                  <p className="staff-role">{member.role}</p>
-                  <p className="staff-bio">{member.bio}</p>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="leadership-placeholder">
-              <span>🎓</span>
-              <p>{t('about.academicPlaceholder')}</p>
-              <Link to="/contact" className="btn btn-dark" style={{ marginTop: '24px' }}>{t('about.getInTouch')}</Link>
-            </div>
-          )}
+          <div className="leadership-placeholder">
+            <span>🎓</span>
+            <p>{t('about.academicPlaceholder')}</p>
+            <Link to="/contact" className="btn btn-dark" style={{ marginTop: '24px' }}>{t('about.getInTouch')}</Link>
+          </div>
         </div>
       </section>
 

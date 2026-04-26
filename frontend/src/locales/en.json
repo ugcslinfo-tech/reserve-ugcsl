@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "about": "About",
     "programs": "Programs",
@@ -94,18 +94,16 @@
       "Provide inclusive, equitable, and globally competitive higher education for all segments of society.",
       "Contribute to positioning Sri Lanka as a leading higher education hub in South Asia."
     ],
-    "boardLabel": "Governance",
-    "boardTitle": "Executive Board",
-    "boardSubtitle": "United Global Campus (Pvt) Ltd. is governed by an experienced board of directors committed to academic excellence and institutional integrity.",
+    "boardLabel": "Executive Board",
+    "boardTitle": "Our Leadership Team",
+    "boardSubtitle": "The founding team driving UGCSL vision for accessible quality higher education in Sri Lanka.",
     "board": [
-      {
-        "name": "[Director Name]",
-        "role": "Chairman / Director",
-        "bio": "Founder and Chairman of United Global Campus (Pvt) Ltd.",
-        "icon": "👤"
-      }
+      { "name": "Dr. W.A.A. Sampath Indrajit", "role": "Founder / CEO", "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu", "photo": "/images/directors/ceo.jpeg" },
+      { "name": "D.A.I. Adithya Sandaruwan", "role": "IT Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "/images/directors/ITM.png" },
+      { "name": "H. Isuru Sankalpa Perera", "role": "HR Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "/images/directors/HRM.jpeg" },
+      { "name": "Finance Manager", "role": "Finance Manager", "bio": "Not assigned yet", "photo": null },
+      { "name": "Marketing Manager", "role": "Marketing Manager", "bio": "Not assigned yet", "photo": null }
     ],
-    "academicLabel": "Academic Team",
     "academicTitle": "Our Academic Staff",
     "academicSubtitle": "Our programs are delivered by qualified academics and industry practitioners dedicated to student success.",
     "academicPlaceholder": "Our academic team will be announced shortly. We are committed to bringing together experienced educators and professionals to lead UGCSL into its next chapter.",

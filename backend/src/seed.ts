@@ -10,10 +10,10 @@ const seedPrograms = [
     slug: "human-rights",
     faculty: "Faculty of Law and Human Rights",
     faculty_si: "නීතිය සහ මානව හිමිකම් පීඨය",
-    degree: "Diploma",
-    degree_si: "ඩිප්ලෝමා",
-    duration: "1 Year",
-    duration_si: "වසර 1",
+    degree: "Foundation Diploma",
+    degree_si: "පදනම් ඩිප්ලෝමා",
+    duration: "6 months",
+    duration_si: "මාස 6",
     description:
       "A focused study on legal frameworks, civil liberties, and the protection of human rights within judicial systems.",
     description_si:
@@ -46,8 +46,8 @@ const seedPrograms = [
     careers_si: ["නීති සහායක", "මානව හිමිකම් උපදේශක"],
     requirements: ["O/L or equivalent qualification"],
     requirements_si: ["අපොස සාමාන්‍ය පෙළ හෝ ඊට සමාන සුදුසුකම්"],
-    fees: "LKR 35,000 per semester",
-    fees_si: "රු. 35,000 කි",
+    fees: "LKR 25,000",
+    fees_si: "රු. 25,000 කි",
     intake: "2026",
     intake_si: "2026",
   },
@@ -59,8 +59,8 @@ const seedPrograms = [
     faculty_si: "රූපලාවණ්ය හා සෞන්දර්ය විද්යා පීඨය",
     degree: "Foundation Diploma",
     degree_si: "පදනම් ඩිප්ලෝමා",
-    duration: "1 Year",
-    duration_si: "වසර 1",
+    duration: " 6 months",
+    duration_si: "මාස 6",
     description:
       "Learn the principles of natural beauty treatments, organic products, and aesthetic care techniques.",
     description_si:
@@ -93,10 +93,10 @@ const seedPrograms = [
     careers_si: ["රූපලාවණ්‍ය ශිල්පී", "රූපලාවණ්‍ය නිෂ්පාදන සංවර්ධක"],
     requirements: ["O/L or equivalent qualification"],
     requirements_si: ["අපොස සාමාන්‍ය පෙළ හෝ ඊට සමාන සුදුසුකම්"],
-    fees: "LKR 45,000 per semester",
-    fees_si: "සෙමෙස්ටරයකට රු. 45,000 කි",
-    intake: "Semester 1 – 2026",
-    intake_si: "1 වන සෙමෙස්ටරය – 2026",
+    fees: "LKR 30,000",
+    fees_si: "රු. 30,000 කි",
+    intake: "2026",
+    intake_si: "2026",
   },
 ];
 
