@@ -11,13 +11,19 @@ async function connectDb() {
   isConnected = true;
 }
 
+// Routes that don't need DB
+const DB_FREE_ROUTES = ['/api/csrf-token', '/api/health', '/'];
+
 export default async function handler(req: Request, res: Response) {
-  try {
-    await connectDb();
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : 'DB connection failed';
-    res.status(500).json({ message: msg });
-    return;
+  const needsDb = !DB_FREE_ROUTES.includes(req.url?.split('?')[0] ?? '');
+  if (needsDb) {
+    try {
+      await connectDb();
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'DB connection failed';
+      res.status(500).json({ message: msg });
+      return;
+    }
   }
   return app(req, res);
 }
