@@ -1,16 +1,31 @@
 import { Link } from 'react-router-dom';
+import { useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import banner from '../assets/campus/banner.jpeg';
 import './shared.css';
 import './About.css';
 
 const roadmapYears = ['2025', '2026', '2027', '2028'];
+const CARDS_PER_VIEW = 3;
+const CARD_GAP = 24;
 
 export default function About() {
   const { t } = useTranslation();
   const objectives = t('about.objectives', { returnObjects: true }) as string[];
   const roadmap = t('about.roadmap', { returnObjects: true }) as string[];
   const board = t('about.board', { returnObjects: true }) as { name: string; role: string; bio: string; photo: string | null }[];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const trackWrapRef = useRef<HTMLDivElement>(null);
+  const maxIndex = Math.max(0, board.length - CARDS_PER_VIEW);
+  const prev = () => setCarouselIndex((i) => Math.max(0, i - 1));
+  const next = () => setCarouselIndex((i) => Math.min(maxIndex, i + 1));
+
+  const getOffset = () => {
+    const wrap = trackWrapRef.current;
+    if (!wrap) return 0;
+    const cardW = (wrap.offsetWidth - CARD_GAP * (CARDS_PER_VIEW - 1)) / CARDS_PER_VIEW;
+    return carouselIndex * (cardW + CARD_GAP);
+  };
 
   return (
     <main className="about-page">
@@ -59,22 +74,38 @@ export default function About() {
             <h2 className="section-title">{t('about.boardTitle')}</h2>
             <p className="section-subtitle">{t('about.boardSubtitle')}</p>
           </div>
-          <div className="board-grid">
-            {board.map((member, i) => (
-              <div key={i} className="board-card card">
-                <div className="board-photo-wrap">
-                  {member.photo
-                    ? <img src={member.photo} alt={member.name} className="board-photo" />
-                    : <div className="board-photo-placeholder">👤</div>
-                  }
-                </div>
-                <div className="board-info">
-                  <h4>{member.name}</h4>
-                  <p className="board-role">{member.role}</p>
-                  <p className="board-bio">{member.bio}</p>
-                </div>
+          <div className="board-carousel-wrap">
+            <div className="board-carousel-track-wrap" ref={trackWrapRef}>
+              <div
+                className="board-carousel-track"
+                style={{ transform: `translateX(-${getOffset()}px)` }}
+              >
+                {board.map((member, i) => (
+                  <div key={i} className="board-card">
+                    <div className="board-photo-wrap">
+                      {member.photo
+                        ? <img src={member.photo} alt={member.name} className="board-photo" />
+                        : <div className="board-photo-placeholder">👤</div>
+                      }
+                    </div>
+                    <div className="board-info">
+                      <h4>{member.name}</h4>
+                      <p className="board-role">{member.role}</p>
+                      <p className="board-bio">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="carousel-nav">
+              <button className="carousel-btn" onClick={prev} disabled={carouselIndex === 0} aria-label="Previous">‹</button>
+              <div className="carousel-dots">
+                {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+                  <button key={i} className={`carousel-dot ${i === carouselIndex ? 'active' : ''}`} onClick={() => setCarouselIndex(i)} aria-label={`Slide ${i + 1}`} />
+                ))}
+              </div>
+              <button className="carousel-btn" onClick={next} disabled={carouselIndex === maxIndex} aria-label="Next">›</button>
+            </div>
           </div>
         </div>
       </section>
