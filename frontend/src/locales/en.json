@@ -94,10 +94,22 @@
       "Provide inclusive, equitable, and globally competitive higher education for all segments of society.",
       "Contribute to positioning Sri Lanka as a leading higher education hub in South Asia."
     ],
-    "leadershipLabel": "Leadership",
-    "leadershipTitle": "Our Academic Team",
-    "leadershipSubtitle": "Led by experienced academics and industry professionals dedicated to delivering quality higher education.",
-    "leadershipPlaceholder": "Our academic leadership team will be announced shortly. We are committed to bringing together experienced educators and industry professionals to lead UGCSL into its next chapter.",
+    "boardLabel": "Governance",
+    "boardTitle": "Executive Board",
+    "boardSubtitle": "United Global Campus (Pvt) Ltd. is governed by an experienced board of directors committed to academic excellence and institutional integrity.",
+    "board": [
+      {
+        "name": "[Director Name]",
+        "role": "Chairman / Director",
+        "bio": "Founder and Chairman of United Global Campus (Pvt) Ltd.",
+        "icon": "👤"
+      }
+    ],
+    "academicLabel": "Academic Team",
+    "academicTitle": "Our Academic Staff",
+    "academicSubtitle": "Our programs are delivered by qualified academics and industry practitioners dedicated to student success.",
+    "academicPlaceholder": "Our academic team will be announced shortly. We are committed to bringing together experienced educators and professionals to lead UGCSL into its next chapter.",
+    "academic": [],
     "getInTouch": "Get in Touch →",
     "roadmapLabel": "Looking Ahead",
     "roadmapTitle": "Our Roadmap",

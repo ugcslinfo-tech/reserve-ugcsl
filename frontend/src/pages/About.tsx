@@ -10,6 +10,8 @@ export default function About() {
   const { t } = useTranslation();
   const objectives = t('about.objectives', { returnObjects: true }) as string[];
   const roadmap = t('about.roadmap', { returnObjects: true }) as string[];
+  const board = t('about.board', { returnObjects: true }) as { name: string; role: string; bio: string; icon: string }[];
+  const academic = t('about.academic', { returnObjects: true }) as { name: string; role: string; bio: string; icon: string }[];
 
   return (
     <main className="about-page">
@@ -50,19 +52,53 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership */}
+      {/* Executive Board */}
+      <section className="section">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">{t('about.boardLabel')}</span>
+            <h2 className="section-title">{t('about.boardTitle')}</h2>
+            <p className="section-subtitle">{t('about.boardSubtitle')}</p>
+          </div>
+          <div className="staff-grid">
+            {board.map((member, i) => (
+              <div key={i} className="staff-card card">
+                <div className="staff-avatar">{member.icon}</div>
+                <h4>{member.name}</h4>
+                <p className="staff-role">{member.role}</p>
+                <p className="staff-bio">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Staff */}
       <section className="section bg-soft">
         <div className="container">
           <div className="section-header">
-            <span className="section-label">{t('about.leadershipLabel')}</span>
-            <h2 className="section-title">{t('about.leadershipTitle')}</h2>
-            <p className="section-subtitle">{t('about.leadershipSubtitle')}</p>
+            <span className="section-label">{t('about.academicLabel')}</span>
+            <h2 className="section-title">{t('about.academicTitle')}</h2>
+            <p className="section-subtitle">{t('about.academicSubtitle')}</p>
           </div>
-          <div className="leadership-placeholder">
-            <span>🎓</span>
-            <p>{t('about.leadershipPlaceholder')}</p>
-            <Link to="/contact" className="btn btn-dark" style={{ marginTop: '24px' }}>{t('about.getInTouch')}</Link>
-          </div>
+          {Array.isArray(academic) && academic.length > 0 ? (
+            <div className="staff-grid">
+              {academic.map((member, i) => (
+                <div key={i} className="staff-card card">
+                  <div className="staff-avatar">{member.icon}</div>
+                  <h4>{member.name}</h4>
+                  <p className="staff-role">{member.role}</p>
+                  <p className="staff-bio">{member.bio}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="leadership-placeholder">
+              <span>🎓</span>
+              <p>{t('about.academicPlaceholder')}</p>
+              <Link to="/contact" className="btn btn-dark" style={{ marginTop: '24px' }}>{t('about.getInTouch')}</Link>
+            </div>
+          )}
         </div>
       </section>
 
