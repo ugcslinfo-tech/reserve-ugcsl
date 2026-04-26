@@ -104,6 +104,7 @@
       { "name": "Finance Manager", "role": "Finance Manager", "bio": "Not assigned yet", "photo": null },
       { "name": "Marketing Manager", "role": "Marketing Manager", "bio": "Not assigned yet", "photo": null }
     ],
+    "academicLabel": "Academic Staff",
     "academicTitle": "Our Academic Staff",
     "academicSubtitle": "Our programs are delivered by qualified academics and industry practitioners dedicated to student success.",
     "academicPlaceholder": "Our academic team will be announced shortly. We are committed to bringing together experienced educators and professionals to lead UGCSL into its next chapter.",
