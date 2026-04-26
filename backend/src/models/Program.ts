@@ -5,8 +5,11 @@ export interface IProgram extends Document {
   title_si: string;
   slug: string;
   faculty: string;
+  faculty_si: string;
   degree: string;
+  degree_si: string;
   duration: string;
+  duration_si: string;
   description: string;
   description_si: string;
   icon: string;
@@ -32,8 +35,11 @@ const ProgramSchema = new Schema<IProgram>({
   title_si: { type: String, default: '' },
   slug: { type: String, required: true, unique: true },
   faculty: { type: String, required: true },
+  faculty_si: { type: String, default: '' },
   degree: { type: String, required: true },
+  degree_si: { type: String, default: '' },
   duration: { type: String, required: true },
+  duration_si: { type: String, default: '' },
   description: { type: String, required: true },
   description_si: { type: String, default: '' },
   icon: { type: String, default: '🎓' },

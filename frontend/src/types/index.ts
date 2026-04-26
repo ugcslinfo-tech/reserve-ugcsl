@@ -4,8 +4,11 @@ export interface Program {
   title_si?: string;
   slug: string;
   faculty: string;
+  faculty_si?: string;
   degree: string;
+  degree_si?: string;
   duration: string;
+  duration_si?: string;
   description: string;
   description_si?: string;
   icon: string;

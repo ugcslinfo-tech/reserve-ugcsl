@@ -22,6 +22,9 @@ export default function ProgramDetail() {
   const title = isSi ? (p.title_si || p.title) : p.title;
   const description = isSi ? (p.description_si || p.description) : p.description;
   const overview = isSi ? (p.overview_si || p.overview) : p.overview;
+  const faculty = isSi ? (p.faculty_si || p.faculty) : p.faculty;
+  const degree = isSi ? (p.degree_si || p.degree) : p.degree;
+  const duration = isSi ? (p.duration_si || p.duration) : p.duration;
   const modules = isSi ? (p.modules_si?.length ? p.modules_si : p.modules) : p.modules;
   const outcomes = isSi ? (p.outcomes_si?.length ? p.outcomes_si : p.outcomes) : p.outcomes;
   const careers = isSi ? (p.careers_si?.length ? p.careers_si : p.careers) : p.careers;
@@ -43,9 +46,9 @@ export default function ProgramDetail() {
           <h1 className="page-hero-title">{title}</h1>
           <p>{description}</p>
           <div className="pd-hero-meta">
-            <span className="pd-meta-pill">🎓 {p.degree}</span>
-            <span className="pd-meta-pill">⏱ {p.duration}</span>
-            <span className="pd-meta-pill">🏛 {p.faculty}</span>
+            <span className="pd-meta-pill">🎓 {degree}</span>
+            <span className="pd-meta-pill">⏱ {duration}</span>
+            <span className="pd-meta-pill">🏛 {faculty}</span>
             {p.intake && <span className="pd-meta-pill pd-meta-open">📅 {intake}</span>}
           </div>
         </div>
@@ -82,9 +85,9 @@ export default function ProgramDetail() {
             <div className="pd-sidebar-card">
               <h3>{t('programDetail.sidebarTitle')}</h3>
               <ul className="pd-details-list">
-                <li><span>{t('programDetail.qualification')}</span><strong>{p.degree}</strong></li>
-                <li><span>{t('programDetail.duration')}</span><strong>{p.duration}</strong></li>
-                <li><span>{t('programDetail.faculty')}</span><strong>{p.faculty}</strong></li>
+                <li><span>{t('programDetail.qualification')}</span><strong>{degree}</strong></li>
+                <li><span>{t('programDetail.duration')}</span><strong>{duration}</strong></li>
+                <li><span>{t('programDetail.faculty')}</span><strong>{faculty}</strong></li>
                 <li><span>{t('programDetail.mode')}</span><strong>{t('programDetail.modeValue')}</strong></li>
                 {p.intake && <li><span>{t('programDetail.intake')}</span><strong>{intake}</strong></li>}
                 {p.fees && <li><span>{t('programDetail.fees')}</span><strong>{fees}</strong></li>}

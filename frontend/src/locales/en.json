@@ -24,20 +24,15 @@
     },
     "areasOfStudy": "Areas of Study",
     "areasLabel": "Explore",
-    "areasSubtitle": "Our online diploma programs span two faculties — with more disciplines coming soon.",
+    "areasSubtitle": "Our online diploma programs span seven faculties — with more disciplines coming soon.",
     "faculties": [
-      {
-        "name": "Faculty of Social Sciences",
-        "desc": "Psychology, Human Rights Studies, Social Development",
-        "icon": "🌍",
-        "count": 3
-      },
-      {
-        "name": "Faculty of Business",
-        "desc": "Business and Management",
-        "icon": "📈",
-        "count": 1
-      }
+      { "name": "Faculty of Agriculture", "desc": "Agricultural Sciences & Sustainable Farming", "icon": "🌾", "count": 0 },
+      { "name": "Faculty of Cosmetology and Aesthetic Science", "desc": "Beauty, Aesthetics & Wellness", "icon": "✨", "count": 1 },
+      { "name": "Faculty of Law and Human Rights", "desc": "Law, Human Rights & Social Justice", "icon": "⚖️", "count": 1 },
+      { "name": "Faculty of Sri Lankan Indigenous Medicine", "desc": "Ayurveda, Siddha & Traditional Healing", "icon": "🌿", "count": 0 },
+      { "name": "Faculty of Psychology and Counseling", "desc": "Psychology, Mental Health & Counseling", "icon": "🧠", "count": 0 },
+      { "name": "Faculty of Dance and Performing Arts", "desc": "Dance, Drama & Performing Arts", "icon": "🎭", "count": 0 },
+      { "name": "Faculty of Political Science and Public Policy", "desc": "Politics, Governance & Public Policy", "icon": "🏛️", "count": 0 }
     ],
     "programs_count_one": "Program",
     "programs_count_other": "Programs",
@@ -119,7 +114,7 @@
     "heroDesc": "Nationally and internationally recognized diploma and degree programs designed for the next generation of professionals.",
     "searchPlaceholder": "Search programs...",
     "filterAll": "All",
-    "facultyFilters": ["All", "Social Sciences", "Business"],
+    "facultyFilters": ["All", "Agriculture", "Cosmetology", "Law & Human Rights", "Indigenous Medicine", "Psychology", "Performing Arts", "Political Science"],
     "applyNow": "Apply Now →",
     "learnMore": "Learn More →",
     "noResults": "No programs found. Try a different search or filter.",
@@ -193,7 +188,7 @@
     ],
     "enquireFees": "Enquire About Fees",
     "scholarshipCard": "Scholarships Available",
-    "scholarshipAmount": "Up to 50%",
+    "scholarshipAmount": "Up to 30%",
     "scholarshipAmountSub": "off tuition",
     "scholarshipMeta": "Merit-based and need-based scholarships for eligible students",
     "scholarshipIncludes": [

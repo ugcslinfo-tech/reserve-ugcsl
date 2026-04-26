@@ -7,7 +7,16 @@ import './shared.css';
 import './Programs.css';
 
 // Filter values must match DB faculty field exactly
-const FACULTY_FILTER_VALUES = ['All', 'Faculty of Social Sciences', 'Faculty of Business'] as const;
+const FACULTY_FILTER_VALUES = [
+  'All',
+  'Faculty of Agriculture',
+  'Faculty of Cosmetology and Aesthetic Science',
+  'Faculty of Law and Human Rights',
+  'Faculty of Sri Lankan Indigenous Medicine',
+  'Faculty of Psychology and Counseling',
+  'Faculty of Dance and Performing Arts',
+  'Faculty of Political Science and Public Policy',
+] as const;
 type FacultyFilter = typeof FACULTY_FILTER_VALUES[number];
 
 export default function Programs() {

@@ -51,7 +51,7 @@ export default function Home() {
           */}
           <div className="hero-stats">
             {[
-              { value: '4', key: 'home.stats.programs' },
+              { value: '2', key: 'home.stats.programs' },
               { value: '2026', key: 'home.stats.established' },
               { value: '100%', key: 'home.stats.faculty' },
               { value: '100%', key: 'home.stats.online' },
