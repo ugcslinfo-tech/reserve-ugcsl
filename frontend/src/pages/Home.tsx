@@ -114,11 +114,11 @@ export default function Home() {
                   <div className="program-icon">{p.icon}</div>
                   <div className="program-body">
                     <div className="program-meta">
-                      <span className="tag">{p.degree}</span>
-                      <span className="program-duration">⏱ {p.duration}</span>
+                      <span className="tag">{isSi ? (p.degree_si || p.degree) : p.degree}</span>
+                      <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
                     </div>
                     <h3 className="program-title">{isSi ? (p.title_si || p.title) : p.title}</h3>
-                    <p className="program-faculty">{p.faculty}</p>
+                    <p className="program-faculty">{isSi ? (p.faculty_si || p.faculty) : p.faculty}</p>
                     <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
                     <Link to={`/programs/${p.slug}`} className="program-link">{t('home.explorePrograms')}</Link>
                   </div>
