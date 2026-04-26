@@ -65,20 +65,26 @@ export default function About() {
         <div className="container">
           <div className="mv-grid">
             <div className="mv-card vision">
-              <div className="mv-icon">🔭</div>
-              <h3>{t('about.visionTitle')}</h3>
+              <div className="mv-card-header">
+                <span className="mv-icon">🔭</span>
+                <h3>{t('about.visionTitle')}</h3>
+              </div>
               <p>{t('about.visionDesc')}</p>
             </div>
             <div className="mv-card mission">
-              <div className="mv-icon">🎯</div>
-              <h3>{t('about.missionTitle')}</h3>
+              <div className="mv-card-header">
+                <span className="mv-icon">🎯</span>
+                <h3>{t('about.missionTitle')}</h3>
+              </div>
               <p>{t('about.missionDesc')}</p>
             </div>
             <div className="mv-card values">
-              <div className="mv-icon">💎</div>
-              <h3>{t('about.objectivesTitle')}</h3>
-              <ul style={{ textAlign: 'left', paddingLeft: '1.2rem', margin: 0 }}>
-                {objectives.map((obj, i) => <li key={i}>{obj}</li>)}
+              <div className="mv-card-header">
+                <span className="mv-icon">💎</span>
+                <h3>{t('about.objectivesTitle')}</h3>
+              </div>
+              <ul className="mv-objectives">
+                {objectives.map((obj, i) => <li key={i}><span className="mv-obj-dot" />{obj}</li>)}
               </ul>
             </div>
           </div>
