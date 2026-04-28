@@ -98,7 +98,6 @@
 }
 
 .req-icon { font-size: 2rem; }
-
 .req-header h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
 
 .req-list {
@@ -116,102 +115,6 @@
   color: var(--text);
 }
 
-/* Fees Banner */
-.fees-banner {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: var(--radius-lg);
-  padding: 56px 48px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.fees-banner h2 {
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 12px;
-}
-
-.fees-banner p { color: rgba(255,255,255,0.7); max-width: 480px; line-height: 1.6; }
-
-@media (max-width: 900px) {
-  .intakes-grid { grid-template-columns: 1fr 1fr; }
-  .steps-grid { grid-template-columns: 1fr 1fr; }
-  .step-connector { display: none; }
-  .fees-banner { flex-direction: column; padding: 40px 28px; }
-}
-
-@media (max-width: 600px) {
-  .intakes-grid { grid-template-columns: 1fr; gap: 12px; }
-  .steps-grid { grid-template-columns: 1fr; }
-  .req-card { padding: 24px 20px; }
-  .fees-grid { grid-template-columns: 1fr; }
-  .fee-card { padding: 28px 24px; }
-  .faq-question { padding: 16px 20px; font-size: 14px; }
-  .faq-answer { padding: 0 20px 16px; }
-}
-.fees-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-}
-
-.fee-card {
-  padding: 36px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.fee-card-highlight {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent);
-}
-
-.fee-icon { font-size: 2.2rem; }
-
-.fee-card h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.fee-amount {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--primary);
-  line-height: 1.1;
-}
-
-.fee-amount span {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.fee-card > p {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.fee-includes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 4px;
-}
-
-.fee-includes li {
-  font-size: 14px;
-  color: var(--text);
-  display: flex;
-  gap: 8px;
-}
-
 /* FAQ */
 .faq-list {
   display: flex;
@@ -222,10 +125,7 @@
   overflow: hidden;
 }
 
-.faq-item {
-  border-bottom: 1px solid var(--border);
-}
-
+.faq-item { border-bottom: 1px solid var(--border); }
 .faq-item:last-child { border-bottom: none; }
 
 .faq-question {
@@ -264,9 +164,16 @@
   background: var(--bg-soft);
 }
 
-@media (max-width: 768px) {
-  .fees-grid { grid-template-columns: 1fr; }
-  .fee-card { padding: 28px 24px; }
+@media (max-width: 900px) {
+  .intakes-grid { grid-template-columns: 1fr 1fr; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .step-connector { display: none; }
+}
+
+@media (max-width: 600px) {
+  .intakes-grid { grid-template-columns: 1fr; gap: 12px; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .req-card { padding: 24px 20px; }
   .faq-question { padding: 16px 20px; font-size: 14px; }
   .faq-answer { padding: 0 20px 16px; }
 }

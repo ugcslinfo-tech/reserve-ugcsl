@@ -16,8 +16,6 @@ export default function Admissions() {
   const steps = t('admissions.steps', { returnObjects: true }) as { title: string; desc: string }[];
   const diplomaReqs = t('admissions.diplomaRequirements', { returnObjects: true }) as string[];
   const degreeReqs = t('admissions.degreeRequirements', { returnObjects: true }) as string[];
-  const feesIncludes = t('admissions.feesIncludes', { returnObjects: true }) as string[];
-  const scholarshipIncludes = t('admissions.scholarshipIncludes', { returnObjects: true }) as string[];
   const faqs = t('admissions.faqs', { returnObjects: true }) as { q: string; a: string }[];
 
   const requirements = [
@@ -101,39 +99,6 @@ export default function Admissions() {
         </div>
       </section>
 
-      {/* Fees */}
-      <section className="section">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-label">{t('admissions.feesLabel')}</span>
-            <h2 className="section-title">{t('admissions.feesTitle')}</h2>
-            <p className="section-subtitle">{t('admissions.feesSubtitle')}</p>
-          </div>
-          <div className="fees-grid">
-            <div className="fee-card card">
-              <div className="fee-icon">🎓</div>
-              <h3>{t('admissions.diplomaCard')}</h3>
-              <div className="fee-amount">LKR 45,000 <span>{t('admissions.feesPerSemester')}</span></div>
-              <p>{t('admissions.feesMeta')}</p>
-              <ul className="fee-includes">
-                {feesIncludes.map((item, i) => <li key={i}>✓ {item}</li>)}
-              </ul>
-              <Link to="/contact" className="btn btn-dark" style={{ marginTop: '20px', width: '100%', justifyContent: 'center' }}>{t('admissions.enquireFees')}</Link>
-            </div>
-            <div className="fee-card fee-card-highlight card">
-              <div className="fee-icon">🏆</div>
-              <h3>{t('admissions.scholarshipCard')}</h3>
-              <div className="fee-amount" style={{ color: 'var(--accent)' }}>{t('admissions.scholarshipAmount')} <span>{t('admissions.scholarshipAmountSub')}</span></div>
-              <p>{t('admissions.scholarshipMeta')}</p>
-              <ul className="fee-includes">
-                {scholarshipIncludes.map((item, i) => <li key={i}>✓ {item}</li>)}
-              </ul>
-              <Link to="/contact" className="btn btn-primary" style={{ marginTop: '20px', width: '100%', justifyContent: 'center' }}>{t('admissions.applyScholarship')}</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="section bg-soft">
         <div className="container">
@@ -145,19 +110,6 @@ export default function Admissions() {
             {faqs.map((faq, i) => (
               <FaqItem key={i} q={faq.q} a={faq.a} />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Scholarships */}
-      <section className="section">
-        <div className="container">
-          <div className="fees-banner">
-            <div>
-              <h2>{t('admissions.scholarshipsTitle')}</h2>
-              <p>{t('admissions.scholarshipsDesc')}</p>
-            </div>
-            <Link to="/contact" className="btn btn-primary">{t('admissions.enquireScholarships')}</Link>
           </div>
         </div>
       </section>
