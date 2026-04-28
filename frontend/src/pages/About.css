@@ -311,7 +311,7 @@
 
 /* Card: image top, info below */
 .board-card {
-  flex: 0 0 calc((100% - 48px) / 3);
+  flex: 0 0 calc((100% - 72px) / 4);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -350,7 +350,7 @@
 }
 
 .board-info {
-  padding: 18px 20px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 4px;
