@@ -90,10 +90,12 @@
 @media (max-width: 900px) {
   .research-stats { grid-template-columns: repeat(2, 1fr); }
   .collab-banner { grid-template-columns: 1fr; gap: 40px; }
+  .collab-visual { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 600px) {
   .research-stats { grid-template-columns: 1fr 1fr; gap: 20px; }
   .research-stat-value { font-size: 1.8rem; }
   .research-card { padding: 24px 20px; }
+  .collab-visual { grid-template-columns: repeat(3, 1fr); }
 }

@@ -138,19 +138,21 @@
 .fees-banner p { color: rgba(255,255,255,0.7); max-width: 480px; line-height: 1.6; }
 
 @media (max-width: 900px) {
-  .intakes-grid { grid-template-columns: 1fr; }
+  .intakes-grid { grid-template-columns: 1fr 1fr; }
   .steps-grid { grid-template-columns: 1fr 1fr; }
   .step-connector { display: none; }
   .fees-banner { flex-direction: column; padding: 40px 28px; }
 }
 
 @media (max-width: 600px) {
+  .intakes-grid { grid-template-columns: 1fr; gap: 12px; }
   .steps-grid { grid-template-columns: 1fr; }
   .req-card { padding: 24px 20px; }
-  .intakes-grid { gap: 12px; }
+  .fees-grid { grid-template-columns: 1fr; }
+  .fee-card { padding: 28px 24px; }
+  .faq-question { padding: 16px 20px; font-size: 14px; }
+  .faq-answer { padding: 0 20px 16px; }
 }
-
-/* Fees */
 .fees-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
