@@ -13,7 +13,7 @@ const whyIcons: Record<string, string> = {
 const facultyImages: Record<string, string> = {
   'Faculty of Agriculture': '/images/faculties/Agriculture.jpg',
   'Faculty of Cosmetology and Aesthetic Science': '/images/faculties/Beauticulture.jpg',
-  'Faculty of Law and Human Rights': '/images/faculties/law&HumanRights.jpg',
+  'Faculty of Law and Human Rights': '/images/faculties/LawHumanRights.jpg',
   'Faculty of Sri Lankan Indigenous Medicine': '/images/faculties/SLMedicine.jpg',
   'Faculty of Psychology and Counseling': '/images/faculties/psyNCounselling.jpg',
   'Faculty of Dance and Performing Arts': '/images/faculties/Dance.jpg',
