@@ -64,12 +64,13 @@ router.post('/', contactLimiter, validate, async (req: Request, res: Response) =
 
     const mailer = getTransporter();
     if (mailer) {
-      mailer.sendMail({
-        from: `"UGCSL Contact Form" <${process.env.GMAIL_USER}>`,
-        to: process.env.GMAIL_USER,
-        replyTo: email,
-        subject: `[UGCSL Contact] ${escapeHtml(subject)}`,
-        html: `
+      try {
+        await mailer.sendMail({
+          from: `"UGCSL Contact Form" <${process.env.GMAIL_USER}>`,
+          to: process.env.GMAIL_USER,
+          replyTo: email,
+          subject: `[UGCSL Contact] ${escapeHtml(subject)}`,
+          html: `
         <h2>New Contact Form Submission</h2>
         <table cellpadding="6">
           <tr><td><strong>Name</strong></td><td>${escapeHtml(name)}</td></tr>
@@ -79,7 +80,13 @@ router.post('/', contactLimiter, validate, async (req: Request, res: Response) =
           <tr><td><strong>Message</strong></td><td>${escapeHtml(message)}</td></tr>
         </table>
       `,
-      }).catch((err) => console.error('Email send failed:', (err as Error).message));
+        });
+        console.log('Email sent successfully to', process.env.GMAIL_USER);
+      } catch (emailErr) {
+        console.error('Email send failed:', (emailErr as Error).message);
+      }
+    } else {
+      console.error('Email not sent: GMAIL_USER or GMAIL_APP_PASSWORD env vars missing on this instance');
     }
 
     res.status(201).json({ success: true, message: 'Message sent successfully!' });
