@@ -6,19 +6,21 @@ import type { Program, PaginatedResponse } from '../types';
 import './shared.css';
 import './Programs.css';
 
+const CLD = 'https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900';
+
 const programImages: Record<string, string> = {
-  'human-rights': '/images/programs/HumanRights.jpg',
-  'natural-beauticulture': '/images/programs/NaturalCosmetics.jpg',
+  'human-rights': `${CLD}/HumanRights_nf36a6`,
+  'natural-beauticulture': `${CLD}/NaturalCosmetics_aayvqc`,
 };
 
 const facultyImages: Record<string, string> = {
-  'Faculty of Agriculture': '/images/faculties/Agriculture.jpg',
-  'Faculty of Cosmetology and Aesthetic Science': '/images/faculties/Beauticulture.jpg',
-  'Faculty of Law and Human Rights': '/images/faculties/LawHumanRights.jpg',
-  'Faculty of Sri Lankan Indigenous Medicine': '/images/faculties/SLMedicine.jpg',
-  'Faculty of Psychology and Counseling': '/images/faculties/psyNCounselling.jpg',
-  'Faculty of Dance and Performing Arts': '/images/faculties/Dance.jpg',
-  'Faculty of Political Science and Public Policy': '/images/faculties/PoliticalScience.jpg',
+  'Faculty of Agriculture': `${CLD}/Agriculture_b5fxgp`,
+  'Faculty of Cosmetology and Aesthetic Science': `${CLD}/Beauticulture_p5d2mz`,
+  'Faculty of Law and Human Rights': `${CLD}/LawHumanRights_yixp3x`,
+  'Faculty of Sri Lankan Indigenous Medicine': `${CLD}/LawHumanRights_yixp3x`,
+  'Faculty of Psychology and Counseling': `${CLD}/psyNCounselling_rovozo`,
+  'Faculty of Dance and Performing Arts': `${CLD}/Dance_ij23e8`,
+  'Faculty of Political Science and Public Policy': `${CLD}/PoliticalScience_cjvxc8`,
 };
 
 function getProgramImage(p: Program): string | null {
