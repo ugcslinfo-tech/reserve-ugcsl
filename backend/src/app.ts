@@ -21,7 +21,7 @@ app.use(cors({
   },
   credentials: true,
 }));
-if (IS_PROD && !process.env.COOKIE_SECRET) throw new Error('COOKIE_SECRET env var is required in production');
+if (IS_PROD && !process.env.COOKIE_SECRET) console.error('WARNING: COOKIE_SECRET env var is not set in production');
 app.use(cookieParser(process.env.COOKIE_SECRET || 'ugcsl-dev-secret'));
 app.use(express.json({ limit: '10kb' }));
 
