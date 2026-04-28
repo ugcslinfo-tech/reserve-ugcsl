@@ -10,6 +10,16 @@ const whyIcons: Record<string, string> = {
   online: '💻', aligned: '🌍', faculty: '🎓', career: '🎯', inclusive: '🤝',
 };
 
+const facultyImages: Record<string, string> = {
+  'Faculty of Agriculture': '/images/faculties/Agriculture.jpg',
+  'Faculty of Cosmetology and Aesthetic Science': '/images/faculties/Beauticulture.jpg',
+  'Faculty of Law and Human Rights': '/images/faculties/law&HumanRights.jpg',
+  'Faculty of Sri Lankan Indigenous Medicine': '/images/faculties/SLMedicine.jpg',
+  'Faculty of Psychology and Counseling': '/images/faculties/psyNCounselling.jpg',
+  'Faculty of Dance and Performing Arts': '/images/faculties/Dance.jpg',
+  'Faculty of Political Science and Public Policy': '/images/faculties/PoliticalScience.jpg',
+};
+
 export default function Home() {
   const { t, i18n } = useTranslation();
   const isSi = i18n.language === 'si';
@@ -84,11 +94,16 @@ export default function Home() {
           <div className="grid-2 faculties-grid">
             {faculties.map((f) => (
               <Link to="/programs" key={f.name} className="faculty-card card">
-                <div className="faculty-icon">{f.icon}</div>
-                <h3>{f.name}</h3>
-                <p className="faculty-programs">{f.count} {f.count === 1 ? t('home.programs_count_one') : t('home.programs_count_other')}</p>
-                <p className="faculty-desc">{f.desc}</p>
-                <span className="faculty-arrow">→</span>
+                <div className="faculty-img-wrap">
+                  <img src={facultyImages[f.name]} alt={f.name} className="faculty-img" />
+                  <div className="faculty-overlay" />
+                  <span className="faculty-count-badge">{f.count} {f.count === 1 ? t('home.programs_count_one') : t('home.programs_count_other')}</span>
+                </div>
+                <div className="faculty-body">
+                  <h3>{f.name}</h3>
+                  <p className="faculty-desc">{f.desc}</p>
+                  <span className="faculty-link">{t('home.explorePrograms')} →</span>
+                </div>
               </Link>
             ))}
           </div>
