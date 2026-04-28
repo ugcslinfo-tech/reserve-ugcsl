@@ -11,8 +11,8 @@ async function connectDb() {
   isConnected = true;
 }
 
-// Routes that don't need DB
-const DB_FREE_ROUTES = ['/api/csrf-token', '/api/health', '/'];
+// Routes that don't need DB (include both full and Vercel-stripped paths)
+const DB_FREE_ROUTES = ['/api/csrf-token', '/csrf-token', '/api/health', '/health', '/'];
 
 export default async function handler(req: Request, res: Response) {
   const needsDb = !DB_FREE_ROUTES.includes(req.url?.split('?')[0] ?? '');
