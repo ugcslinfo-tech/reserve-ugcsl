@@ -6,6 +6,25 @@ import type { Program, PaginatedResponse } from '../types';
 import './shared.css';
 import './Programs.css';
 
+const programImages: Record<string, string> = {
+  'human-rights': '/images/programs/HumanRights.jpg',
+  'natural-beauticulture': '/images/programs/NaturalCosmetics.jpg',
+};
+
+const facultyImages: Record<string, string> = {
+  'Faculty of Agriculture': '/images/faculties/Agriculture.jpg',
+  'Faculty of Cosmetology and Aesthetic Science': '/images/faculties/Beauticulture.jpg',
+  'Faculty of Law and Human Rights': '/images/faculties/law&HumanRights.jpg',
+  'Faculty of Sri Lankan Indigenous Medicine': '/images/faculties/SLMedicine.jpg',
+  'Faculty of Psychology and Counseling': '/images/faculties/psyNCounselling.jpg',
+  'Faculty of Dance and Performing Arts': '/images/faculties/Dance.jpg',
+  'Faculty of Political Science and Public Policy': '/images/faculties/PoliticalScience.jpg',
+};
+
+function getProgramImage(p: Program): string | null {
+  return programImages[p.slug] ?? facultyImages[p.faculty] ?? null;
+}
+
 // Filter values must match DB faculty field exactly
 const FACULTY_FILTER_VALUES = [
   'All',
@@ -79,28 +98,33 @@ export default function Programs() {
             </div>
           ) : (
             <div className="grid-3">
-              {filtered.map((p) => (
-                <div key={p._id} className="program-card card">
-                  <div className="program-icon">{p.icon}</div>
-                  <div className="program-body">
-                    <div className="program-meta">
-                      <span className="tag">{isSi ? (p.degree_si || p.degree) : p.degree}</span>
-                      <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
+              {filtered.map((p) => {
+                const img = getProgramImage(p);
+                return (
+                  <div key={p._id} className="program-card card">
+                    <div className="program-img-wrap">
+                      {img
+                        ? <img src={img} alt={p.title} className="program-img" />
+                        : <div className="program-img-fallback">{p.icon}</div>
+                      }
+                      <div className="program-img-overlay" />
+                      <span className="program-degree-badge">{isSi ? (p.degree_si || p.degree) : p.degree}</span>
                     </div>
-                    <h3 className="program-title">{isSi ? (p.title_si || p.title) : p.title}</h3>
-                    <p className="program-faculty">{isSi ? (p.faculty_si || p.faculty) : p.faculty}</p>
-                    <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
-                    <div style={{ display: 'flex', gap: '8px', marginTop: '8px', flexWrap: 'wrap' }}>
-                      <Link to={`/programs/${p.slug}`} className="btn btn-dark" style={{ fontSize: '13px', padding: '10px 20px' }}>
-                        {t('programs.learnMore')}
-                      </Link>
-                      <Link to="/admissions" className="btn btn-primary" style={{ fontSize: '13px', padding: '10px 20px' }}>
-                        {t('programs.applyNow')}
-                      </Link>
+                    <div className="program-body">
+                      <p className="program-faculty">{isSi ? (p.faculty_si || p.faculty) : p.faculty}</p>
+                      <h3 className="program-title">{isSi ? (p.title_si || p.title) : p.title}</h3>
+                      <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
+                      <div className="program-footer">
+                        <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
+                        <div className="program-actions">
+                          <Link to={`/programs/${p.slug}`} className="btn btn-dark">{t('programs.learnMore')}</Link>
+                          <Link to="/admissions" className="btn btn-primary">{t('programs.applyNow')}</Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

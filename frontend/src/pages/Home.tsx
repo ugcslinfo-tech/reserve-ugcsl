@@ -20,6 +20,11 @@ const facultyImages: Record<string, string> = {
   'Faculty of Political Science and Public Policy': '/images/faculties/PoliticalScience.jpg',
 };
 
+const programImages: Record<string, string> = {
+  'human-rights': '/images/programs/HumanRights.jpg',
+  'natural-beauticulture': '/images/programs/NaturalCosmetics.jpg',
+};
+
 export default function Home() {
   const { t, i18n } = useTranslation();
   const isSi = i18n.language === 'si';
@@ -125,19 +130,25 @@ export default function Home() {
           ) : (
             <div className="grid-3">
               {featured.map((p) => (
-                <div key={p._id} className="program-card card">
-                  <div className="program-icon">{p.icon}</div>
-                  <div className="program-body">
-                    <div className="program-meta">
-                      <span className="tag">{isSi ? (p.degree_si || p.degree) : p.degree}</span>
-                      <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
-                    </div>
-                    <h3 className="program-title">{isSi ? (p.title_si || p.title) : p.title}</h3>
-                    <p className="program-faculty">{isSi ? (p.faculty_si || p.faculty) : p.faculty}</p>
-                    <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
-                    <Link to={`/programs/${p.slug}`} className="program-link">{t('home.explorePrograms')}</Link>
+                <Link key={p._id} to={`/programs/${p.slug}`} className="program-card card">
+                  <div className="program-img-wrap">
+                    {programImages[p.slug]
+                      ? <img src={programImages[p.slug]} alt={p.title} className="program-img" />
+                      : <div className="program-img-fallback">{p.icon}</div>
+                    }
+                    <div className="program-img-overlay" />
+                    <span className="program-degree-badge">{isSi ? (p.degree_si || p.degree) : p.degree}</span>
                   </div>
-                </div>
+                  <div className="program-body">
+                    <p className="program-faculty">{isSi ? (p.faculty_si || p.faculty) : p.faculty}</p>
+                    <h3 className="program-title">{isSi ? (p.title_si || p.title) : p.title}</h3>
+                    <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
+                    <div className="program-footer">
+                      <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
+                      <span className="program-link">{t('home.explorePrograms')} →</span>
+                    </div>
+                  </div>
+                </Link>
               ))}
             </div>
           )}

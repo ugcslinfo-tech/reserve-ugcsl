@@ -5,6 +5,25 @@ import type { Program } from '../types';
 import './shared.css';
 import './ProgramDetail.css';
 
+const programImages: Record<string, string> = {
+  'human-rights': '/images/programs/HumanRights.jpg',
+  'natural-beauticulture': '/images/programs/NaturalCosmetics.jpg',
+};
+
+const facultyImages: Record<string, string> = {
+  'Faculty of Agriculture': '/images/faculties/Agriculture.jpg',
+  'Faculty of Cosmetology and Aesthetic Science': '/images/faculties/Beauticulture.jpg',
+  'Faculty of Law and Human Rights': '/images/faculties/law&HumanRights.jpg',
+  'Faculty of Sri Lankan Indigenous Medicine': '/images/faculties/SLMedicine.jpg',
+  'Faculty of Psychology and Counseling': '/images/faculties/psyNCounselling.jpg',
+  'Faculty of Dance and Performing Arts': '/images/faculties/Dance.jpg',
+  'Faculty of Political Science and Public Policy': '/images/faculties/PoliticalScience.jpg',
+};
+
+function getProgramImage(p: Program): string | null {
+  return programImages[p.slug] ?? facultyImages[p.faculty] ?? null;
+}
+
 export default function ProgramDetail() {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
@@ -36,13 +55,13 @@ export default function ProgramDetail() {
     <main>
       <section className="page-hero pd-hero">
         <div className="page-hero-bg" />
+        {getProgramImage(p) && <img src={getProgramImage(p)!} alt={title} className="pd-hero-img" />}
         <div className="container page-hero-content">
           <div className="pd-breadcrumb">
             <Link to="/programs">{t('programDetail.breadcrumbParent')}</Link>
             <span>›</span>
             <span>{title}</span>
           </div>
-          <div className="pd-hero-icon">{p.icon}</div>
           <h1 className="page-hero-title">{title}</h1>
           <p>{description}</p>
           <div className="pd-hero-meta">
