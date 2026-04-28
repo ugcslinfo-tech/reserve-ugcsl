@@ -43,17 +43,12 @@ function csrfHandler(_req: Request, res: Response) {
 }
 
 app.get('/api/csrf-token', csrfHandler);
-app.get('/csrf-token', csrfHandler);
 
 app.use('/api/contact', contactRoutes);
 app.use('/api/programs', programRoutes);
 app.use('/api/news', newsRoutes);
-app.use('/contact', contactRoutes);
-app.use('/programs', programRoutes);
-app.use('/news', newsRoutes);
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok', campus: 'UGCSL' }));
-app.get('/health', (_req, res) => res.json({ status: 'ok', campus: 'UGCSL' }));
 app.get('/', (_req, res) => res.json({ status: 'ok', campus: 'UGCSL', message: 'API is running' }));
 
 app.use((_req, res) => res.status(404).json({ message: 'Route not found' }));
