@@ -238,6 +238,13 @@
   letter-spacing: 0.04em;
 }
 
+.faculty-count-badge.coming-soon {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary);
+  font-style: italic;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .faculty-body {
   padding: 20px 24px 22px;
   display: flex;

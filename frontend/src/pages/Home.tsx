@@ -104,7 +104,12 @@ export default function Home() {
                 <div className="faculty-img-wrap">
                   <img src={facultyImages[f.name]} alt={f.name} className="faculty-img" />
                   <div className="faculty-overlay" />
-                  <span className="faculty-count-badge">{f.count} {f.count === 1 ? t('home.programs_count_one') : t('home.programs_count_other')}</span>
+                  <span className={`faculty-count-badge ${f.count === 0 ? 'coming-soon' : ''}`}>
+                    {f.count > 0 
+                      ? `${f.count} ${f.count === 1 ? t('home.programs_count_one') : t('home.programs_count_other')}`
+                      : t('home.comingSoon')
+                    }
+                  </span>
                 </div>
                 <div className="faculty-body">
                   <h3>{f.name}</h3>
