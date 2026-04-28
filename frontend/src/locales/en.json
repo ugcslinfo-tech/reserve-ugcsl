@@ -9,7 +9,7 @@
     "applyNow": "Apply Now"
   },
   "home": {
-    "badge": "Admissions Open – Semester 1, 2026",
+    "badge": "Admissions Open – 2026 Intake",
     "heroTitle1": "Begin Your Journey at",
     "heroTitle2": "United Global Campus",
     "heroTitle3": "of Sri Lanka",
@@ -70,7 +70,7 @@
     "allNews": "All News →",
     "readMore": "Read More →",
     "ctaTitle": "Ready to Begin Your Journey?",
-    "ctaDesc": "Be among the first to join United Global Campus of Sri Lanka. Applications for Semester 1, 2026 are now open.",
+    "ctaDesc": "Be among the first to join United Global Campus of Sri Lanka. Applications for the 2026 intake are now open.",
     "applyNow": "Apply Now",
     "requestInfo": "Request Info"
   },
@@ -155,16 +155,16 @@
     "label": "Admissions",
     "heroTitle1": "Begin Your Journey",
     "heroTitle2": "at UGCSL",
-    "heroDesc": "Applications for Semester 1 – 2026 are now open. Be among the first to join United Global Campus of Sri Lanka.",
-    "applyOnline": "Apply Online →",
+    "heroDesc": "Applications for the 2026 intake are now open. Join United Global Campus of Sri Lanka and start your diploma journey today.",
+    "applyOnline": "Apply Now →",
     "viewRequirements": "View Requirements",
     "processLabel": "Process",
     "howToApply": "How to Apply",
-    "howToApplySubtitle": "Our streamlined application process makes it easy to take the next step in your academic journey.",
+    "howToApplySubtitle": "Our straightforward application process makes it easy to take the next step in your academic journey.",
     "steps": [
       {
         "title": "Choose Your Program",
-        "desc": "Browse our diploma and degree programs and find the right fit for your career goals."
+        "desc": "Browse our diploma programs and find the right fit for your career goals."
       },
       {
         "title": "Check Requirements",
@@ -172,7 +172,7 @@
       },
       {
         "title": "Submit Application",
-        "desc": "Complete the application form and upload all required documents."
+        "desc": "Complete the application form and submit all required documents via our contact page."
       },
       {
         "title": "Receive Decision",
@@ -183,57 +183,24 @@
     "requirementsTitle": "What You Need to Apply",
     "deadline": "Application Deadline:",
     "status": {
-      "open": "Open",
+      "open": "Now Open",
       "closed": "Closed",
       "upcoming": "Upcoming"
     },
     "diplomaRequirements": [
       "O/L or equivalent qualification",
       "Minimum credits in relevant subjects",
-      "English proficiency",
+      "Basic English proficiency",
       "Completed application form",
       "Copy of NIC or passport"
     ],
-    "degreeRequirements": [
-      "A/L or equivalent qualification",
-      "Minimum passes at A/L",
-      "English proficiency (IELTS 5.5+ or equivalent)",
-      "Personal statement",
-      "Two academic references"
-    ],
-    "scholarshipsTitle": "Scholarships & Financial Aid",
-    "scholarshipsDesc": "UGCSL offers merit-based scholarships and financial assistance to eligible students. Contact us to learn more about available opportunities.",
-    "enquireScholarships": "Enquire About Scholarships →",
-    "feesLabel": "Tuition",
-    "feesTitle": "Fees & Financial Aid",
-    "feesSubtitle": "Transparent, affordable pricing with scholarship opportunities for eligible students.",
-    "diplomaCard": "Diploma Programs",
-    "feesPerSemester": "/ semester",
-    "feesMeta": "2 semesters · 1 year total · 100% online",
-    "feesIncludes": [
-      "All course materials",
-      "Online learning platform access",
-      "Academic support",
-      "Certificate upon completion"
-    ],
-    "enquireFees": "Enquire About Fees",
-    "scholarshipCard": "Scholarships Available",
-    "scholarshipAmount": "Up to 30%",
-    "scholarshipAmountSub": "off tuition",
-    "scholarshipMeta": "Merit-based and need-based scholarships for eligible students",
-    "scholarshipIncludes": [
-      "Academic merit scholarships",
-      "Financial hardship assistance",
-      "Early application discount",
-      "Instalment payment plans"
-    ],
-    "applyScholarship": "Apply for Scholarship",
+    "degreeRequirements": [],
     "faqLabel": "FAQ",
     "faqTitle": "Frequently Asked Questions",
     "faqs": [
       {
         "q": "Are UGCSL qualifications recognized?",
-        "a": "Yes. UGCSL programs are designed to meet national and international recognition standards. Our diplomas are structured in alignment with Sri Lanka Qualifications Framework (SLQF) guidelines."
+        "a": "Yes. UGCSL programs are designed to meet national recognition standards and are structured in alignment with Sri Lanka Qualifications Framework (SLQF) guidelines."
       },
       {
         "q": "Can I study while working full-time?",
@@ -245,7 +212,7 @@
       },
       {
         "q": "How long does each program take?",
-        "a": "All current diploma programs are 1 year (2 semesters). Each semester is approximately 6 months."
+        "a": "All current diploma programs are 1 year in duration. You can study at your own pace from anywhere."
       },
       {
         "q": "Is there a physical campus I need to attend?",
@@ -253,15 +220,15 @@
       },
       {
         "q": "When can I apply?",
-        "a": "Applications for Semester 1 – 2026 are currently open. The deadline is March 31, 2026. Semester 2 – 2026 applications open in May 2026."
-      },
-      {
-        "q": "What payment options are available?",
-        "a": "We offer full semester payment and instalment plans. Scholarship and financial aid options are also available for eligible students — contact us to learn more."
+        "a": "Applications for the 2026 intake are currently open. Submit your application before December 31, 2026."
       },
       {
         "q": "How do I get my certificate?",
         "a": "Upon successful completion of all modules and assessments, your certificate will be issued digitally and can also be requested in physical form."
+      },
+      {
+        "q": "Do you offer degree programs?",
+        "a": "Currently, UGCSL offers diploma programs. Degree programs are planned for future intakes as the institution grows."
       }
     ],
     "reqLevelDiploma": "Diploma Programs",
@@ -386,7 +353,7 @@
     "careersLabel": "Career Pathways",
     "careersTitle": "Where This Program Takes You",
     "ctaTitle": "Ready to Enrol in",
-    "ctaDesc": "Applications for Semester 1 – 2026 are now open. Take the next step in your academic journey.",
+    "ctaDesc": "Applications for 2026 intake are now open. Take the next step in your academic journey.",
     "ctaApply": "Apply Now",
     "ctaBack": "← All Programs",
     "notFound": "Program not found.",

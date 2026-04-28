@@ -102,11 +102,12 @@ const seedPrograms = [
 
 const seedNews = [
   {
-    title: "UGCSL Opens Admissions for Semester 1 – 2026",
+    title: "UGCSL Opens Admissions for 2026 Intake",
     category: "Admissions",
     excerpt:
-      "United Global Campus of Sri Lanka is now accepting applications for Semester 1, 2026.",
+      "United Global Campus of Sri Lanka is now accepting applications for the 2026 intake. Apply before December 31, 2026.",
     date: new Date("2026-03-01"),
+    image: "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900/AdmissonOpen_dsfsya",
   },
   {
     title: "UGCSL Officially Established as a Higher Education Institution",
@@ -114,6 +115,7 @@ const seedNews = [
     excerpt:
       "United Global Campus (Pvt) Ltd. has been officially established in Sri Lanka.",
     date: new Date("2026-01-15"),
+    image: "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900/inauguration_lqfpjs",
   },
 ];
 

@@ -198,9 +198,15 @@ export default function Home() {
             <div className="grid-3">
               {news?.map((item) => (
                 <article key={item._id} className="news-card card">
-                  <div className="news-img-placeholder">
-                    <span>{item.category[0]}</span>
-                  </div>
+                  {item.image ? (
+                    <div className="news-img-wrap">
+                      <img src={item.image} alt={item.title} className="news-img" />
+                    </div>
+                  ) : (
+                    <div className="news-img-placeholder">
+                      <span>{item.category[0]}</span>
+                    </div>
+                  )}
                   <div className="news-body">
                     <span className="tag">{item.category}</span>
                     <h3 className="news-title">{item.title}</h3>

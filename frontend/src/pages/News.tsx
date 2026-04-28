@@ -46,10 +46,16 @@ export default function News() {
             <div className="news-grid">
               {news?.map((item: NewsItem, i: number) => (
                 <article key={item._id} className={`news-article card ${i === 0 ? 'featured' : ''}`}>
-                  <div className="news-article-img">
-                    <span>{item.category[0]}</span>
-                    <div className="news-article-cat">{item.category}</div>
-                  </div>
+                  {item.image ? (
+                    <div className="news-article-img" style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                      <div className="news-article-cat">{item.category}</div>
+                    </div>
+                  ) : (
+                    <div className="news-article-img">
+                      <span>{item.category[0]}</span>
+                      <div className="news-article-cat">{item.category}</div>
+                    </div>
+                  )}
                   <div className="news-article-body">
                     <h3>{item.title}</h3>
                     <p>{item.excerpt}</p>

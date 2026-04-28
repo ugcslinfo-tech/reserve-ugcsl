@@ -5,22 +5,19 @@ import './shared.css';
 import './Admissions.css';
 
 const intakes = [
-  { semester: 'Semester 1 – 2025', deadline: 'August 31, 2025', statusKey: 'closed' },
-  { semester: 'Semester 2 – 2025', deadline: 'December 31, 2025', statusKey: 'closed' },
-  { semester: 'Semester 1 – 2026', deadline: 'March 31, 2026', statusKey: 'open' },
-  { semester: 'Semester 2 – 2026', deadline: 'August 31, 2026', statusKey: 'upcoming' },
+  { intake: '2026 Intake', deadline: 'December 31, 2026', statusKey: 'open' },
+  { intake: '2027 Intake', deadline: 'December 31, 2027', statusKey: 'upcoming' },
+  { intake: '2028 Intake', deadline: 'December 31, 2028', statusKey: 'upcoming' },
 ];
 
 export default function Admissions() {
   const { t } = useTranslation();
   const steps = t('admissions.steps', { returnObjects: true }) as { title: string; desc: string }[];
   const diplomaReqs = t('admissions.diplomaRequirements', { returnObjects: true }) as string[];
-  const degreeReqs = t('admissions.degreeRequirements', { returnObjects: true }) as string[];
   const faqs = t('admissions.faqs', { returnObjects: true }) as { q: string; a: string }[];
 
   const requirements = [
     { level: t('admissions.reqLevelDiploma'), icon: '🎓', items: diplomaReqs },
-    { level: t('admissions.reqLevelDegree'), icon: '📚', items: degreeReqs },
   ];
 
   return (
@@ -43,9 +40,9 @@ export default function Admissions() {
         <div className="container">
           <div className="intakes-grid">
             {intakes.map((i) => (
-              <div key={i.semester} className={`intake-card ${i.statusKey}`}>
+              <div key={i.intake} className={`intake-card ${i.statusKey}`}>
                 <div className="intake-status">{t(`admissions.status.${i.statusKey}`)}</div>
-                <h3>{i.semester}</h3>
+                <h3>{i.intake}</h3>
                 <p>{t('admissions.deadline')} <strong>{i.deadline}</strong></p>
               </div>
             ))}
