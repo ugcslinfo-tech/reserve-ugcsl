@@ -40,7 +40,7 @@ const validate = [
 
 router.post('/', contactLimiter, validate, async (req: Request, res: Response) => {
   // CSRF: compare signed cookie token against x-csrf-token header using timing-safe comparison
-  const cookieToken = req.signedCookies?.csrf_token as string | undefined;
+  const cookieToken = req.cookies?.csrf_token as string | undefined;
   const headerToken = req.headers['x-csrf-token'] as string | undefined;
   if (
     !cookieToken ||
