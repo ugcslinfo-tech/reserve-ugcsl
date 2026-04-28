@@ -13,18 +13,18 @@ const whyIcons: Record<string, string> = {
 const CLD = 'https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900';
 
 const facultyImages: Record<string, string> = {
-  'Faculty of Agriculture': `${CLD}/Agriculture_b5fxgp`,
-  'Faculty of Cosmetology and Aesthetic Science': `${CLD}/Beauticulture_p5d2mz`,
-  'Faculty of Law and Human Rights': `${CLD}/LawHumanRights_yixp3x`,
-  'Faculty of Sri Lankan Indigenous Medicine': `${CLD}/LawHumanRights_yixp3x`,
-  'Faculty of Psychology and Counseling': `${CLD}/psyNCounselling_rovozo`,
-  'Faculty of Dance and Performing Arts': `${CLD}/Dance_ij23e8`,
-  'Faculty of Political Science and Public Policy': `${CLD}/PoliticalScience_cjvxc8`,
+  'Faculty of Agriculture': `${CLD}/Agriculture_wedsor`,
+  'Faculty of Cosmetology and Aesthetic Science': `${CLD}/Beauticulture_ntrvzb`,
+  'Faculty of Law and Human Rights': `${CLD}/LawHumanRights_prh0ew`,
+  'Faculty of Sri Lankan Indigenous Medicine': `${CLD}/SLMedicine_cukymm`,
+  'Faculty of Psychology and Counseling': `${CLD}/psyNCounselling_gl2ojc`,
+  'Faculty of Dance and Performing Arts': `${CLD}/Dance_ke9ocz`,
+  'Faculty of Political Science and Public Policy': `${CLD}/PoliticalScience_fry4ut`,
 };
 
 const programImages: Record<string, string> = {
-  'human-rights': `${CLD}/HumanRights_nf36a6`,
-  'natural-beauticulture': `${CLD}/NaturalCosmetics_aayvqc`,
+  'human-rights': `${CLD}/HumanRights_pfoha8`,
+  'natural-beauticulture': `${CLD}/NaturalCosmetics_dssaen`,
 };
 
 export default function Home() {
