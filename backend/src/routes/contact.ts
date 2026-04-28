@@ -7,13 +7,22 @@ import Contact from '../models/Contact';
 
 const router = Router();
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-});
+// Lazy singleton — created once on first use, not at module load time
+let transporter: nodemailer.Transporter | null = null;
+function getTransporter(): nodemailer.Transporter | null {
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) return null;
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_APP_PASSWORD },
+    });
+  }
+  return transporter;
+}
+
+function escapeHtml(str: string): string {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 
 const contactLimiter = rateLimit({
   windowMs: 60 * 60 * 1000,
@@ -53,23 +62,25 @@ router.post('/', contactLimiter, validate, async (req: Request, res: Response) =
     const { name, email, phone, subject, message } = req.body;
     await Contact.create({ name, email, phone, subject, message });
 
-    // Send email notification — non-blocking, don't fail the request if email fails
-    transporter.sendMail({
-      from: `"UGCSL Contact Form" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER,
-      replyTo: email,
-      subject: `[UGCSL Contact] ${subject}`,
-      html: `
+    const mailer = getTransporter();
+    if (mailer) {
+      mailer.sendMail({
+        from: `"UGCSL Contact Form" <${process.env.GMAIL_USER}>`,
+        to: process.env.GMAIL_USER,
+        replyTo: email,
+        subject: `[UGCSL Contact] ${escapeHtml(subject)}`,
+        html: `
         <h2>New Contact Form Submission</h2>
         <table cellpadding="6">
-          <tr><td><strong>Name</strong></td><td>${name}</td></tr>
-          <tr><td><strong>Email</strong></td><td>${email}</td></tr>
-          ${phone ? `<tr><td><strong>Phone</strong></td><td>${phone}</td></tr>` : ''}
-          <tr><td><strong>Subject</strong></td><td>${subject}</td></tr>
-          <tr><td><strong>Message</strong></td><td>${message}</td></tr>
+          <tr><td><strong>Name</strong></td><td>${escapeHtml(name)}</td></tr>
+          <tr><td><strong>Email</strong></td><td>${escapeHtml(email)}</td></tr>
+          ${phone ? `<tr><td><strong>Phone</strong></td><td>${escapeHtml(phone)}</td></tr>` : ''}
+          <tr><td><strong>Subject</strong></td><td>${escapeHtml(subject)}</td></tr>
+          <tr><td><strong>Message</strong></td><td>${escapeHtml(message)}</td></tr>
         </table>
       `,
-    }).catch((err) => console.error('Email send failed:', err));
+      }).catch((err) => console.error('Email send failed:', (err as Error).message));
+    }
 
     res.status(201).json({ success: true, message: 'Message sent successfully!' });
   } catch {
