@@ -98,7 +98,7 @@
     "boardTitle": "Governing Body",
     "boardSubtitle": "The Board of Directors provides strategic oversight and governance for United Global Campus of Sri Lanka.",
     "board": [
-      { "name": "Dr. W.A.A. Sampath Indrajit", "role": "Founder / CEO", "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_400/ceo_kgvmys" },
+      { "name": "Dr. W.A.A. Sampath Indrajit", "role": "Founder / CEO", "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ceo_kgvmys" },
       { "name": "To Be Announced", "role": "Director", "bio": "Appointment pending", "photo": null },
       { "name": "To Be Announced", "role": "Director", "bio": "Appointment pending", "photo": null },
       { "name": "To Be Announced", "role": "Director", "bio": "Appointment pending", "photo": null },
@@ -109,8 +109,8 @@
     "operationalTitle": "Operational Leadership",
     "operationalSubtitle": "The management team responsible for the day-to-day operations of UGCSL.",
     "operationalTeam": [
-      { "name": "H. Isuru Sankalpa Perera", "role": "Administrative Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_400/HRM_artlbj" },
-      { "name": "D.A.I. Adithya Sandaruwan", "role": "Technical / IT Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_400/ITM_xkxh9p" },
+      { "name": "H. Isuru Sankalpa Perera", "role": "Administrative Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRM_artlbj" },
+      { "name": "D.A.I. Adithya Sandaruwan", "role": "Technical / IT Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ITM_xkxh9p" },
       { "name": "To Be Announced", "role": "HR Manager", "bio": "Appointment pending", "photo": null },
       { "name": "To Be Announced", "role": "Finance Manager", "bio": "Appointment pending", "photo": null },
       { "name": "To Be Announced", "role": "Marketing Manager", "bio": "Appointment pending", "photo": null }
