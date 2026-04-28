@@ -32,9 +32,13 @@ export interface Program {
 export interface NewsItem {
   _id: string;
   title: string;
+  slug: string;
   category: string;
   excerpt: string;
+  content: string;
   date: string;
+  image?: string;
+  author?: string;
 }
 
 export interface ContactForm {

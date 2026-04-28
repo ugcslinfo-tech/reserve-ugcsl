@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { NewsItem, PaginatedResponse } from '../types';
@@ -42,10 +43,14 @@ export default function News() {
 
           {loading ? (
             <div className="spinner" />
-          ) : (
+          ) : news && news.length > 0 ? (
             <div className="news-grid">
-              {news?.map((item: NewsItem, i: number) => (
-                <article key={item._id} className={`news-article card ${i === 0 ? 'featured' : ''}`}>
+              {news.map((item: NewsItem, i: number) => (
+                <Link 
+                  key={item._id} 
+                  to={`/news/${item.slug}`}
+                  className={`news-article card ${i === 0 ? 'featured' : ''}`}
+                >
                   {item.image ? (
                     <div className="news-article-img" style={{ backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                       <div className="news-article-cat">{item.category}</div>
@@ -64,8 +69,13 @@ export default function News() {
                       <span className="news-read-more">{t('news.readMore')}</span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
+            </div>
+          ) : (
+            <div style={{ textAlign: 'center', padding: '80px 20px', color: 'var(--text-muted)' }}>
+              <p style={{ fontSize: '1.1rem', marginBottom: '8px' }}>No news found</p>
+              <p style={{ fontSize: '14px' }}>Check back later for updates</p>
             </div>
           )}
         </div>
