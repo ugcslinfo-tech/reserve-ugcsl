@@ -168,24 +168,6 @@
 /* Section helpers */
 .bg-soft { background: var(--bg-soft); }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 56px;
-}
-
-.section-header .section-label { justify-content: center; }
-.section-header .section-label::before { display: none; }
-.section-header .section-subtitle { margin: 0 auto; }
-
-.section-header-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 48px;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-
 /* Faculty Cards */
 .faculties-grid { margin-top: 0; }
 

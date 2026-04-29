@@ -26,13 +26,48 @@
     "areasLabel": "Explore",
     "areasSubtitle": "Our online diploma programs span seven faculties — with more disciplines coming soon.",
     "faculties": [
-      { "name": "Faculty of Agriculture", "desc": "Agricultural Sciences & Sustainable Farming", "icon": "🌾", "count": 0 },
-      { "name": "Faculty of Cosmetology and Aesthetic Science", "desc": "Beauty, Aesthetics & Wellness", "icon": "✨", "count": 1 },
-      { "name": "Faculty of Law and Human Rights", "desc": "Law, Human Rights & Social Justice", "icon": "⚖️", "count": 1 },
-      { "name": "Faculty of Sri Lankan Indigenous Medicine", "desc": "Ayurveda, Siddha & Traditional Healing", "icon": "🌿", "count": 0 },
-      { "name": "Faculty of Psychology and Counseling", "desc": "Psychology, Mental Health & Counseling", "icon": "🧠", "count": 0 },
-      { "name": "Faculty of Dance and Performing Arts", "desc": "Dance, Drama & Performing Arts", "icon": "🎭", "count": 0 },
-      { "name": "Faculty of Political Science and Public Policy", "desc": "Politics, Governance & Public Policy", "icon": "🏛️", "count": 0 }
+      {
+        "name": "Faculty of Agriculture",
+        "desc": "Agricultural Sciences & Sustainable Farming",
+        "icon": "🌾",
+        "count": 0
+      },
+      {
+        "name": "Faculty of Cosmetology and Aesthetic Science",
+        "desc": "Beauty, Aesthetics & Wellness",
+        "icon": "✨",
+        "count": 1
+      },
+      {
+        "name": "Faculty of Law and Human Rights",
+        "desc": "Law, Human Rights & Social Justice",
+        "icon": "⚖️",
+        "count": 1
+      },
+      {
+        "name": "Faculty of Sri Lankan Indigenous Medicine",
+        "desc": "Ayurveda, Siddha & Traditional Healing",
+        "icon": "🌿",
+        "count": 0
+      },
+      {
+        "name": "Faculty of Psychology and Counseling",
+        "desc": "Psychology, Mental Health & Counseling",
+        "icon": "🧠",
+        "count": 0
+      },
+      {
+        "name": "Faculty of Dance and Performing Arts",
+        "desc": "Dance, Drama & Performing Arts",
+        "icon": "🎭",
+        "count": 0
+      },
+      {
+        "name": "Faculty of Political Science and Public Policy",
+        "desc": "Politics, Governance & Public Policy",
+        "icon": "🏛️",
+        "count": 0
+      }
     ],
     "programs_count_one": "Program",
     "programs_count_other": "Programs",
@@ -99,34 +134,120 @@
     "boardTitle": "Governing Body",
     "boardSubtitle": "The Board of Directors provides strategic oversight and governance for United Global Campus of Sri Lanka.",
     "board": [
-      { "name": "Dr. W.A.A. Sampath Indrajit", "role": "Founder / CEO", "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ceo_kgvmys" },
-      { "name": "Dr. A.S.P. Anoj de Silva", "role": "Director", "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Deshamanya Deshabandu (Honorary)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr2_ksjveq" },
-      { "name": "His Excellency Dr. B.H. Saiyadeen", "role": "Director", "bio": "Global Ambassador UNPAF, SL Ambassador IHPRC, SL Ambassador (Unami Buffalo Nation)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr3_zntzcr" },
-      { "name": "K. A. S. K. Gunaratne", "role": "Director", "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q" },
-      { "name": "Dr. H.K. Rangana", "role": "Director", "bio": "", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr5_t7j9ij" },
-      { "name": "Dr. T.V. Dinesh Pradeep Kumara", "role": "Director", "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Samajaseva Vibhushana, Deshamanya", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr6_mihf1m" }
+      {
+        "name": "Dr. W.A.A. Sampath Indrajit",
+        "role": "Founder / CEO",
+        "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ceo_kgvmys"
+      },
+      {
+        "name": "Dr. A.P.S. Anoj de Silva",
+        "role": "Director",
+        "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Deshamanya Deshabandu (Honorary)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr2_ksjveq"
+      },
+      {
+        "name": "His Excellency Dr. B.H. Saiyadeen",
+        "role": "Director",
+        "bio": "Global Ambassador UNPAF, SL Ambassador IHPRC, SL Ambassador (Unami Buffalo Nation)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr3_zntzcr"
+      },
+      {
+        "name": "K. A. S. K. Gunaratne",
+        "role": "Director",
+        "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
+      },
+      {
+        "name": "Dr. Rangana Hewa Kottage",
+        "role": "Director",
+        "bio": "Deshamanya, Vishwa Keerthi ,Bachelor of Business Administration, Chairman of Golden Green Plantation (Pvt) Ltd and Golden Green Fertilizer (Pvt) Ltd.",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr5_t7j9ij"
+      },
+      {
+        "name": "Dr. T.V. Dinesh Pradeep Kumara",
+        "role": "Director",
+        "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Samajaseva Vibhushana, Deshamanya",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr6_mihf1m"
+      }
     ],
     "operationalLabel": "Management Team",
     "operationalTitle": "Operational Leadership",
     "operationalSubtitle": "The management team responsible for the day-to-day operations of UGCSL.",
     "operationalTeam": [
-      { "name": "H. Isuru Sankalpa Perera", "role": "Administrative Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRM_artlbj" },
-      { "name": "D.A.I. Adithya Sandaruwan", "role": "Technical / IT Manager", "bio": "Vishwa Keerthi Sri Desha Shakthi, Deshabhimanya (Hon.)", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ITM_xkxh9p" },
-      { "name": "Nandun Ranika Wickramarachchi", "role": "HR Manager", "bio": "", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRMN_udmfdq" },
-      { "name": "Dr. Harshana Sandun Pushpakumara", "role": "Marketing Manager", "bio": "", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/MMN_uldqo1" },
-      { "name": "To Be Announced", "role": "Finance Manager", "bio": "Appointment pending", "photo": null }
+      {
+        "name": "H. Isuru Sankalpa Perera",
+        "role": "Administrative Manager",
+        "bio": "",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRM_artlbj"
+      },
+      {
+        "name": "D.A.I. Adithya Sandaruwan",
+        "role": "Technical / IT Manager",
+        "bio": "",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ITM_xkxh9p"
+      },
+      {
+        "name": "Nandun Ranika Wickramarachchi",
+        "role": "HR Manager",
+        "bio": "",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRMN_udmfdq"
+      },
+      {
+        "name": "Dr. Harshana Sandun Pushpakumara",
+        "role": "Marketing Manager",
+        "bio": "",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/MMN_uldqo1"
+      },
+      {
+        "name": "To Be Announced",
+        "role": "Finance Manager",
+        "bio": "Appointment pending",
+        "photo": null
+      }
     ],
     "academicLabel": "Academic Staff",
     "academicTitle": "Academic Leadership",
     "academicSubtitle": "Our academic team leads the faculties and programs of UGCSL with expertise and dedication.",
     "academicStaff": [
-      { "name": "To Be Announced", "role": "Chancellor", "photo": null },
-      { "name": "Venerable Ruwanpura Gnanavimala Sthavira", "role": "Vice-Chancellor", "bio": "Incumbent of Deepaloka Viharaya, Mudaliwatta, Kadugannawa. Deputy Director of Gunasiri Sandaham Nikethanaya (Bhikkhu Training Institute), Dekatana. Principal of Sri Deepaloka Dhamma School. Chief Organizer of Deepaloka Buddha Bhumi Pilgrimage. Justice of the Peace (for the entire island). Sri Saddharma Vagishwara Vishwa Kirthi Sasana Shobhana, Sarabhagna Maha Pandita, Sri Sakya Sinha Vibhushana Sasana Shiromani. Member of the Supreme Executive Board of Sri Sakya Sinha University. Buddhist Philosophy (Dip) Royal High Campus.", "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ViceChancellor_pwzbl9" },
-      { "name": "To Be Announced", "role": "Dean of Law and Human Rights", "photo": null },
-      { "name": "To Be Announced", "role": "Dean of Psychology and Counselling", "photo": null },
-      { "name": "To Be Announced", "role": "Dean of Cosmetology and Aesthetic Sciences", "photo": null },
-      { "name": "To Be Announced", "role": "Dean of Agriculture", "photo": null },
-      { "name": "To Be Announced", "role": "Dean of Political Science and Public Policy", "photo": null }
+      {
+        "name": "Venerable Kandakatiye Dharmarathana Thero",
+        "role": "Chancellor",
+        "bio": "Shasana Shobana, Kawya Visharadha, Bachelor of Arts, National Diploma in Teaching (Science), Trained Teacher / School Teacher",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/chancellor_ocanhy"
+      },
+      {
+        "name": "Venerable Ruwanpura Gnanavimala Sthavira",
+        "role": "Vice-Chancellor",
+        "bio": "Incumbent of Deepaloka Viharaya, Mudaliwatta, Kadugannawa. Deputy Director of Gunasiri Sandaham Nikethanaya (Bhikkhu Training Institute), Dekatana. Principal of Sri Deepaloka Dhamma School. Chief Organizer of Deepaloka Buddha Bhumi Pilgrimage. Justice of the Peace (for the entire island). Sri Saddharma Vagishwara Vishwa Kirthi Sasana Shobhana, Sarabhagna Maha Pandita, Sri Sakya Sinha Vibhushana Sasana Shiromani. Member of the Supreme Executive Board of Sri Sakya Sinha University. Buddhist Philosophy (Dip) Royal High Campus.",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ViceChancellor_pwzbl9"
+      },
+      {
+        "name": "To Be Announced",
+        "role": "Dean of Law and Human Rights",
+        "photo": null
+      },
+      {
+        "name": "To Be Announced",
+        "role": "Dean of Psychology and Counselling",
+        "photo": null
+      },
+      {
+        "name": "K. A. S. K. Gunaratne",
+        "role": "Dean of Cosmetology and Aesthetic Sciences",
+        "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
+      },
+      {
+        "name": "To Be Announced",
+        "role": "Dean of Agriculture",
+        "photo": null
+      },
+      {
+        "name": "To Be Announced",
+        "role": "Dean of Political Science and Public Policy",
+        "photo": null
+      }
     ],
     "toBeAnnounced": "To Be Announced",
     "getInTouch": "Get in Touch →",
@@ -145,7 +266,16 @@
     "heroDesc": "Nationally and internationally recognized diploma and degree programs designed for the next generation of professionals.",
     "searchPlaceholder": "Search programs...",
     "filterAll": "All",
-    "facultyFilters": ["All", "Agriculture", "Cosmetology", "Law & Human Rights", "Indigenous Medicine", "Psychology", "Performing Arts", "Political Science"],
+    "facultyFilters": [
+      "All",
+      "Agriculture",
+      "Cosmetology",
+      "Law & Human Rights",
+      "Indigenous Medicine",
+      "Psychology",
+      "Performing Arts",
+      "Political Science"
+    ],
     "applyNow": "Apply Now →",
     "learnMore": "Learn More →",
     "noResults": "No programs found. Try a different search or filter.",
