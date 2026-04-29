@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { Program, NewsItem, PaginatedResponse } from '../types';
+import LazyImage from '../components/LazyImage';
 import banner from '../assets/campus/banner.jpeg';
 import './Home.css';
 
@@ -87,7 +88,7 @@ export default function Home() {
 
       {/* Banner */}
       <section className="home-banner">
-        <img src={banner} alt="United Global Campus of Sri Lanka" />
+        <LazyImage src={banner} alt="United Global Campus of Sri Lanka" style={{ width: '100%', height: '480px', objectFit: 'cover', objectPosition: 'center top' }} />
       </section>
 
       {/* Areas of Study */}
@@ -102,7 +103,7 @@ export default function Home() {
             {faculties.map((f) => (
               <Link to="/programs" key={f.name} className="faculty-card card">
                 <div className="faculty-img-wrap">
-                  <img src={facultyImages[f.name]} alt={f.name} className="faculty-img" />
+                  <LazyImage src={facultyImages[f.name]} alt={f.name} className="faculty-img" />
                   <div className="faculty-overlay" />
                   <span className={`faculty-count-badge ${f.count === 0 ? 'coming-soon' : ''}`}>
                     {f.count > 0 
@@ -140,7 +141,7 @@ export default function Home() {
                 <Link key={p._id} to={`/programs/${p.slug}`} className="program-card card">
                   <div className="program-img-wrap">
                     {programImages[p.slug]
-                      ? <img src={programImages[p.slug]} alt={p.title} className="program-img" />
+                      ? <LazyImage src={programImages[p.slug]} alt={p.title} className="program-img" />
                       : <div className="program-img-fallback">{p.icon}</div>
                     }
                     <div className="program-img-overlay" />
@@ -205,7 +206,7 @@ export default function Home() {
                 <article key={item._id} className="news-card card">
                   {item.image ? (
                     <div className="news-img-wrap">
-                      <img src={item.image} alt={item.title} className="news-img" />
+                      <LazyImage src={item.image} alt={item.title} className="news-img" />
                     </div>
                   ) : (
                     <div className="news-img-placeholder">
