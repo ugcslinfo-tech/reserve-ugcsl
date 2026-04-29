@@ -3,6 +3,7 @@ import { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WhatsAppFloat from './components/WhatsAppFloat';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for code splitting
@@ -74,6 +75,7 @@ export default function App() {
         </div>
       </ErrorBoundary>
       <Footer />
+      <WhatsAppFloat />
     </BrowserRouter>
   );
 }
