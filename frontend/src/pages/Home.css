@@ -152,19 +152,19 @@
 /* Banner */
 .home-banner {
   width: 100%;
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  line-height: 0;
 }
 
 .home-banner-img,
 .home-banner img {
   width: 100%;
   height: auto;
-  min-height: 400px;
-  max-height: 600px;
-  object-fit: cover;
-  object-position: center center;
   display: block;
+  max-width: 100%;
 }
 
 /* Section helpers */
@@ -579,8 +579,6 @@
   .cta-actions { justify-content: center; width: 100%; flex-direction: column; }
   .cta-actions .btn { flex: 1; justify-content: center; width: 100%; }
   .section-header-row { flex-direction: column; align-items: flex-start; }
-  .home-banner-img,
-  .home-banner img { min-height: 300px; max-height: 450px; }
   .program-body { padding: 18px 20px 20px; }
   .news-img-placeholder { height: 160px; }
   .news-img-wrap { height: 160px; }
@@ -594,8 +592,6 @@
   .hero-stats { gap: 20px; }
   .hero-stat-value { font-size: 1.4rem; }
   .hero-stat-label { font-size: 12px; }
-  .home-banner-img,
-  .home-banner img { min-height: 250px; max-height: 350px; }
   .why-card { padding: 20px; gap: 16px; }
   .why-icon { font-size: 1.5rem; }
   .cta-section { padding: 56px 0; }
@@ -611,8 +607,6 @@
   .hero-badge { font-size: 12px; padding: 6px 14px; }
   .hero-actions { gap: 10px; }
   .hero-scroll { display: none; }
-  .home-banner-img,
-  .home-banner img { min-height: 200px; max-height: 300px; }
   .faculty-card h3 { font-size: 0.95rem; }
   .faculty-desc { font-size: 12px; }
   .program-title { font-size: 0.95rem; }
