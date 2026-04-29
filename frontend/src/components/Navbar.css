@@ -147,7 +147,13 @@
   display: none;
   flex-direction: column;
   gap: 5px;
-  padding: 4px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px; /* Touch-friendly */
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger span {
@@ -172,7 +178,7 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: min(280px, 85vw);
+    width: min(320px, 90vw);
     height: 100vh;
     background: white;
     flex-direction: column;
@@ -182,21 +188,55 @@
     box-shadow: -8px 0 32px rgba(0,0,0,0.12);
     transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    z-index: 1001;
   }
 
   .navbar-links.open { right: 0; }
 
-  .navbar-links a { color: var(--text) !important; width: 100%; }
-  .navbar-links a:hover { background: rgba(26,58,107,0.06) !important; color: var(--primary) !important; }
+  .navbar-links a { 
+    color: var(--text) !important; 
+    width: 100%; 
+    padding: 12px 16px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .navbar-links a:hover { 
+    background: rgba(26,58,107,0.06) !important; 
+    color: var(--primary) !important; 
+  }
+
+  .navbar-cta {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+  }
 
   .lang-toggle {
     border-color: rgba(26,58,107,0.25);
     background: rgba(26,58,107,0.06);
     color: var(--primary);
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 16px 0;
+  }
+  
+  .navbar.scrolled {
+    padding: 10px 0;
   }
 }
 
 @media (max-width: 480px) {
   .logo-tagline { display: none; }
   .logo-name { font-size: 16px; }
+  .logo-img { width: 40px; height: 40px; }
+  
+  .navbar-links {
+    width: 100%;
+    padding: 70px 20px 24px;
+  }
 }

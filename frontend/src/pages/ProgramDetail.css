@@ -182,13 +182,45 @@
 }
 
 @media (max-width: 768px) {
-  .pd-careers-grid { grid-template-columns: 1fr 1fr; }
+  .pd-careers-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .pd-sidebar { flex-direction: column; }
-  .pd-sidebar-card { min-width: unset; }
+  .pd-sidebar-card { min-width: unset; padding: 24px; }
+  .pd-section-title { font-size: 1.4rem; }
+  .pd-block-title { font-size: 1rem; }
+  .pd-overview-text { font-size: 14px; }
+  .pd-list-modules li { font-size: 13px; padding: 9px 14px; }
+  .pd-list-check li { font-size: 13px; }
+  .pd-career-card { padding: 14px 18px; font-size: 13px; }
+  .pd-details-list li { font-size: 13px; }
+}
+
+@media (max-width: 600px) {
+  .pd-breadcrumb { font-size: 12px; gap: 6px; }
+  .pd-hero-icon { font-size: 2.5rem; margin-bottom: 12px; }
+  .pd-meta-pill { font-size: 12px; padding: 5px 12px; }
+  .pd-section-title { font-size: 1.3rem; margin-bottom: 16px; }
+  .pd-overview-text { margin-bottom: 32px; }
+  .pd-block { margin-bottom: 32px; }
+  .pd-block-title { font-size: 0.95rem; margin-bottom: 12px; }
+  .pd-sidebar-card { padding: 20px; }
+  .pd-sidebar-card h3 { font-size: 0.95rem; margin-bottom: 16px; }
+  .pd-details-list { gap: 12px; }
+  .pd-details-list li { font-size: 12px; }
 }
 
 @media (max-width: 480px) {
   .pd-careers-grid { grid-template-columns: 1fr; }
   .pd-hero-meta { gap: 8px; }
-  .pd-meta-pill { font-size: 12px; padding: 5px 11px; }
+  .pd-meta-pill { font-size: 11px; padding: 5px 11px; }
+  .pd-breadcrumb { font-size: 11px; }
+  .pd-hero-icon { font-size: 2.2rem; }
+  .pd-section-title { font-size: 1.2rem; }
+  .pd-overview-text { font-size: 13px; }
+  .pd-block-title { font-size: 0.9rem; }
+  .pd-list-modules li { font-size: 12px; padding: 8px 12px; }
+  .pd-list-check li { font-size: 12px; }
+  .pd-career-card { padding: 12px 16px; font-size: 12px; }
+  .pd-career-icon { font-size: 1.1rem; }
+  .pd-sidebar-card { padding: 18px; }
+  .pd-sidebar-card h3 { font-size: 0.9rem; }
 }

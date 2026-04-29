@@ -142,22 +142,51 @@
 .filter-tab:hover { border-color: var(--primary); color: var(--primary); }
 .filter-tab.active { background: var(--primary); border-color: var(--primary); color: white; }
 
+@media (max-width: 1024px) {
+  .news-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
 @media (max-width: 900px) {
   .news-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .news-article.featured { flex-direction: column; }
   .news-article.featured .news-article-img { width: 100%; min-height: 200px; }
+  .news-article.featured .news-article-body h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 768px) {
+  .news-categories { gap: 6px; margin-bottom: 40px; }
+  .filter-tab { padding: 8px 16px; font-size: 12px; min-height: 40px; }
+  .news-article-img { height: 180px; font-size: 3rem; }
+  .news-article-body { padding: 24px; }
+  .news-article-body h3 { font-size: 1rem; }
+  .news-article-body p { font-size: 13px; }
 }
 
 @media (max-width: 600px) {
-  .news-grid { grid-template-columns: 1fr; }
+  .news-grid { grid-template-columns: 1fr; gap: 16px; }
   .news-categories {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
   }
   .news-categories::-webkit-scrollbar { display: none; }
   .news-categories .filter-tab { flex-shrink: 0; }
-  .news-article-body { padding: 20px; }
+  .news-article-img { height: 160px; font-size: 2.5rem; }
+  .news-article.featured .news-article-img { min-height: 180px; }
+  .news-article-body { padding: 20px; gap: 10px; }
+  .news-article-body h3 { font-size: 0.95rem; }
+  .news-article-footer { font-size: 12px; padding-top: 12px; }
+}
+
+@media (max-width: 480px) {
+  .news-categories { gap: 4px; }
+  .filter-tab { padding: 7px 14px; font-size: 11px; }
+  .news-article-img { height: 140px; font-size: 2rem; }
+  .news-article-body { padding: 18px; }
+  .news-article-body h3 { font-size: 0.9rem; }
+  .news-article-body p { font-size: 12px; }
+  .news-article-cat { font-size: 11px; padding: 3px 10px; }
 }

@@ -567,20 +567,56 @@
 }
 
 @media (max-width: 768px) {
-  .hero-stats { gap: 20px; flex-wrap: wrap; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
   .hero-stat-value { font-size: 1.6rem; }
   .hero-content { padding-top: 100px; padding-bottom: 60px; }
-  .hero-actions { gap: 12px; }
+  .hero-actions { gap: 12px; flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; justify-content: center; }
-  .why-inner { grid-template-columns: 1fr; gap: 40px; }
-  .cta-inner { flex-direction: column; text-align: center; }
-  .cta-actions { justify-content: center; width: 100%; }
-  .cta-actions .btn { flex: 1; justify-content: center; }
+  .why-inner { grid-template-columns: 1fr; gap: 48px; }
+  .cta-inner { flex-direction: column; text-align: center; align-items: center; }
+  .cta-actions { justify-content: center; width: 100%; flex-direction: column; }
+  .cta-actions .btn { flex: 1; justify-content: center; width: 100%; }
   .section-header-row { flex-direction: column; align-items: flex-start; }
+  .home-banner { max-height: 280px; }
+  .home-banner img { height: 280px; }
+  .program-body { padding: 18px 20px 20px; }
+  .news-img-placeholder { height: 160px; }
+  .news-img-wrap { height: 160px; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 90vh; }
+  .hero-content { padding-top: 90px; padding-bottom: 50px; }
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-stats { gap: 20px; }
+  .hero-stat-value { font-size: 1.4rem; }
+  .hero-stat-label { font-size: 12px; }
   .home-banner { max-height: 220px; }
   .home-banner img { height: 220px; }
-  .faculty-card { padding: 24px; }
-  .program-body { padding: 16px 20px 20px; }
-  .program-icon { padding: 20px 20px 0; }
-  .news-img-placeholder { height: 140px; }
+  .why-card { padding: 20px; gap: 16px; }
+  .why-icon { font-size: 1.5rem; }
+  .cta-section { padding: 56px 0; }
+  .faculty-body { padding: 18px 20px 20px; }
+  .program-footer { flex-direction: column; align-items: flex-start; }
+  .program-actions { width: 100%; }
+  .program-actions .btn { flex: 1; }
+}
+
+@media (max-width: 480px) {
+  .hero { min-height: 85vh; }
+  .hero-content { padding-top: 80px; padding-bottom: 40px; }
+  .hero-badge { font-size: 12px; padding: 6px 14px; }
+  .hero-actions { gap: 10px; }
+  .hero-scroll { display: none; }
+  .home-banner { max-height: 180px; }
+  .home-banner img { height: 180px; }
+  .faculty-card h3 { font-size: 0.95rem; }
+  .faculty-desc { font-size: 12px; }
+  .program-title { font-size: 0.95rem; }
+  .program-desc { font-size: 12px; }
+  .news-title { font-size: 0.95rem; }
+  .news-excerpt { font-size: 13px; }
+  .cta-inner h2 { font-size: clamp(1.4rem, 6vw, 1.8rem); }
+  .cta-inner p { font-size: 0.95rem; }
 }

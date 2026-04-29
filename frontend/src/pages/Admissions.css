@@ -164,16 +164,57 @@
   background: var(--bg-soft);
 }
 
-@media (max-width: 900px) {
-  .intakes-grid { grid-template-columns: 1fr 1fr; }
-  .steps-grid { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1024px) {
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .step-connector { display: none; }
+}
+
+@media (max-width: 900px) {
+  .intakes-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .intake-card { padding: 24px; }
+  .intake-card h3 { font-size: 0.95rem; }
+  .intake-card p { font-size: 13px; }
+  .step-card { padding: 28px 20px; }
+  .step-num { width: 52px; height: 52px; font-size: 15px; }
+  .step-card h3 { font-size: 0.95rem; }
+  .step-card p { font-size: 13px; }
+  .req-card { padding: 32px 28px; }
+  .req-icon { font-size: 1.8rem; }
+  .req-header h3 { font-size: 1.1rem; }
+  .req-list li { font-size: 14px; }
 }
 
 @media (max-width: 600px) {
   .intakes-grid { grid-template-columns: 1fr; gap: 12px; }
+  .intake-card { padding: 20px; }
+  .intake-status { font-size: 11px; padding: 3px 10px; }
   .steps-grid { grid-template-columns: 1fr; }
+  .step-card { padding: 24px 16px; }
+  .step-num { width: 48px; height: 48px; font-size: 14px; margin-bottom: 16px; }
   .req-card { padding: 24px 20px; }
+  .req-header { gap: 12px; margin-bottom: 20px; }
+  .req-icon { font-size: 1.6rem; }
+  .req-header h3 { font-size: 1rem; }
+  .req-list { gap: 10px; }
+  .req-list li { font-size: 13px; gap: 10px; }
   .faq-question { padding: 16px 20px; font-size: 14px; }
-  .faq-answer { padding: 0 20px 16px; }
+  .faq-answer { padding: 0 20px 16px; font-size: 13px; }
+  .faq-chevron { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+  .intake-card { padding: 18px; }
+  .intake-card h3 { font-size: 0.9rem; }
+  .step-card { padding: 20px 12px; }
+  .step-num { width: 44px; height: 44px; font-size: 13px; }
+  .step-card h3 { font-size: 0.9rem; }
+  .step-card p { font-size: 12px; }
+  .req-card { padding: 20px 16px; }
+  .req-list li { font-size: 12px; }
+  .faq-question { padding: 14px 16px; font-size: 13px; }
+  .faq-answer { padding: 0 16px 14px; font-size: 12px; }
 }
