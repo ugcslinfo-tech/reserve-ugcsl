@@ -101,7 +101,7 @@ export default function Home() {
           </div>
           <div className="grid-2 faculties-grid">
             {faculties.map((f) => (
-              <Link to="/programs" key={f.name} className="faculty-card card">
+              <Link to={`/programs?faculty=${encodeURIComponent(f.name)}`} key={f.name} className="faculty-card card">
                 <div className="faculty-img-wrap">
                   <LazyImage src={facultyImages[f.name]} alt={f.name} className="faculty-img" />
                   <div className="faculty-overlay" />

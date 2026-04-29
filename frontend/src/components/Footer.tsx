@@ -20,9 +20,10 @@ export default function Footer() {
             </div>
             <p className="footer-desc">{t('footer.desc')}</p>
             <div className="footer-socials">
-              {['𝕏', 'in', 'f', '▶'].map((s, i) => (
-                <a key={i} href="#" className="social-btn" aria-label="Social">{s}</a>
-              ))}
+              <a href="#" className="social-btn" aria-label="X">𝕏</a>
+              <a href="#" className="social-btn" aria-label="LinkedIn">in</a>
+              <a href="https://www.facebook.com/share/1A2nxpyHiU/" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">f</a>
+              <a href="#" className="social-btn" aria-label="YouTube">▶</a>
             </div>
           </div>
 

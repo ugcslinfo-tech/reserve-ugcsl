@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { Program, PaginatedResponse } from '../types';
@@ -44,9 +44,17 @@ export default function Programs() {
   const { t, i18n } = useTranslation();
   const isSi = i18n.language === 'si';
   const { data: res, loading } = useFetch<PaginatedResponse<Program>>('/programs');
+  const [searchParams] = useSearchParams();
   const [filter, setFilter] = useState<FacultyFilter>('All');
   const [search, setSearch] = useState('');
   const filterLabels = t('programs.facultyFilters', { returnObjects: true }) as string[];
+
+  useEffect(() => {
+    const facultyParam = searchParams.get('faculty');
+    if (facultyParam && FACULTY_FILTER_VALUES.includes(facultyParam as FacultyFilter)) {
+      setFilter(facultyParam as FacultyFilter);
+    }
+  }, [searchParams]);
 
   const filtered = res?.data.filter((p) => {
     const matchFaculty = filter === 'All' || p.faculty === filter;
