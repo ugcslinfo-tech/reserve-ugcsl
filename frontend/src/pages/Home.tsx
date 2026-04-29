@@ -88,7 +88,7 @@ export default function Home() {
 
       {/* Banner */}
       <section className="home-banner">
-        <LazyImage src={banner} alt="United Global Campus of Sri Lanka" style={{ width: '100%', height: '480px', objectFit: 'cover', objectPosition: 'center top' }} />
+        <LazyImage src={banner} alt="United Global Campus of Sri Lanka" className="home-banner-img" />
       </section>
 
       {/* Areas of Study */}
