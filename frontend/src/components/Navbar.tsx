@@ -92,6 +92,7 @@ export default function Navbar() {
             <span /><span /><span />
           </button>
         </div>
+        </div>
       </nav>
     </>
   );
