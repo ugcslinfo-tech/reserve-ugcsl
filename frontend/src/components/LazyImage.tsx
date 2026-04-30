@@ -6,9 +6,17 @@ interface LazyImageProps {
   className?: string;
   style?: React.CSSProperties;
   placeholder?: string;
+  aspectRatio?: string;
 }
 
-export default function LazyImage({ src, alt, className = '', style, placeholder }: LazyImageProps) {
+export default function LazyImage({ 
+  src, 
+  alt, 
+  className = '', 
+  style, 
+  placeholder,
+  aspectRatio 
+}: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -41,8 +49,10 @@ export default function LazyImage({ src, alt, className = '', style, placeholder
       className={`${className} ${isLoaded ? 'loaded' : 'loading'}`}
       style={{
         ...style,
-        opacity: isLoaded ? 1 : 0.5,
+        ...(aspectRatio && { aspectRatio }), // Reserve space if aspect ratio provided
+        opacity: isLoaded ? 1 : 0,
         transition: 'opacity 0.3s ease',
+        backgroundColor: isLoaded ? 'transparent' : '#f1f5f9',
       }}
       onLoad={() => setIsLoaded(true)}
       loading="lazy"

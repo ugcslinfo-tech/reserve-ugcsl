@@ -153,7 +153,7 @@
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr3_zntzcr"
       },
       {
-        "name": "K. A. S. K. Gunaratne",
+        "name": "Mr. K. A. S. K. Gunaratne",
         "role": "Director",
         "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
@@ -176,19 +176,19 @@
     "operationalSubtitle": "The management team responsible for the day-to-day operations of UGCSL.",
     "operationalTeam": [
       {
-        "name": "H. Isuru Sankalpa Perera",
+        "name": "Mr. H. Isuru Sankalpa Perera",
         "role": "Administrative Manager",
         "bio": "",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRM_artlbj"
       },
       {
-        "name": "D.A.I. Adithya Sandaruwan",
+        "name": "Mr. D.A.I. Adithya Sandaruwan",
         "role": "Technical / IT Manager",
         "bio": "",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ITM_xkxh9p"
       },
       {
-        "name": "Nandun Ranika Wickramarachchi",
+        "name": "Mr. Nandun Ranika Wickramarachchi",
         "role": "HR Manager",
         "bio": "",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/HRMN_udmfdq"
@@ -211,13 +211,13 @@
     "academicSubtitle": "Our academic team leads the faculties and programs of UGCSL with expertise and dedication.",
     "academicStaff": [
       {
-        "name": "Venerable Kandakatiye Dharmarathana Thero",
+        "name": "Ven. Kandakatiye Dharmarathana Thero",
         "role": "Chancellor",
         "bio": "Shasana Shobana, Kawya Visharadha, Bachelor of Arts, National Diploma in Teaching (Science), Trained Teacher / School Teacher",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/chancellor_ocanhy"
       },
       {
-        "name": "Venerable Ruwanpura Gnanavimala Sthavira",
+        "name": "Ven. Ruwanpura Gnanavimala Sthavira",
         "role": "Vice-Chancellor",
         "bio": "Incumbent of Deepaloka Viharaya, Mudaliwatta, Kadugannawa. Deputy Director of Gunasiri Sandaham Nikethanaya (Bhikkhu Training Institute), Dekatana. Principal of Sri Deepaloka Dhamma School. Chief Organizer of Deepaloka Buddha Bhumi Pilgrimage. Justice of the Peace (for the entire island). Sri Saddharma Vagishwara Vishwa Kirthi Sasana Shobhana, Sarabhagna Maha Pandita, Sri Sakya Sinha Vibhushana Sasana Shiromani. Member of the Supreme Executive Board of Sri Sakya Sinha University. Buddhist Philosophy (Dip) Royal High Campus.",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ViceChancellor_pwzbl9"
@@ -233,7 +233,7 @@
         "photo": null
       },
       {
-        "name": "K. A. S. K. Gunaratne",
+        "name": "Mr. K. A. S. K. Gunaratne",
         "role": "Dean of Cosmetology and Aesthetic Sciences",
         "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
@@ -247,6 +247,12 @@
         "name": "To Be Announced",
         "role": "Dean of Political Science and Public Policy",
         "photo": null
+      },
+      {
+        "name": "Mr. Udana Wewalagedara",
+        "role": "Visiting Lecturer",
+        "bio": "M.sc in Social Work (reading) - National Institute of Social Development, PQHRM - CIPM Sri Lanka, Higher Diploma and Diploma in Counselling Psychology - SIBA Campus - Sri Lanka, Diploma in Drug Abuse Management Studies - University of Colombo, ICAP - Prevention (ICAP - P - 039) and Recovery (ICAP - RS - 168)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/visitingLec_rd2rnt"
       }
     ],
     "toBeAnnounced": "To Be Announced",

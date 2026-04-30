@@ -4,6 +4,7 @@ import { useFetch } from '../hooks/useApi';
 import type { Program, NewsItem, PaginatedResponse } from '../types';
 import LazyImage from '../components/LazyImage';
 import banner from '../assets/campus/banner.jpeg';
+import './shared.css';
 import './Home.css';
 
 const whyKeys = ['online', 'aligned', 'faculty', 'career', 'inclusive'] as const;

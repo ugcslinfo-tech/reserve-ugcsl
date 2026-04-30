@@ -134,6 +134,7 @@ button {
   transition: var(--transition);
   white-space: nowrap;
   min-height: 44px; /* Touch-friendly minimum */
+  min-width: 140px; /* Prevent layout shift from font loading */
   text-align: center;
 }
 
@@ -161,6 +162,7 @@ button {
 .btn-dark {
   background: var(--primary);
   color: white;
+  min-width: 160px; /* Wider for "View All Programs" button */
 }
 
 .btn-dark:hover {
@@ -191,6 +193,7 @@ button {
   border: 1px solid var(--border);
   overflow: hidden;
   transition: var(--transition);
+  contain: layout style paint; /* Prevent layout shifts */
 }
 
 .card:hover {

@@ -11,12 +11,12 @@
 .section-header .section-subtitle { margin: 0 auto; }
 
 .section-header-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
   gap: 24px;
-  flex-wrap: wrap;
+  margin-bottom: 48px;
+  contain: layout style;
 }
 
 /* Page hero */
@@ -71,6 +71,9 @@
   .page-hero-title { font-size: clamp(1.6rem, 7vw, 2.4rem); }
   .page-hero-content p { font-size: 1rem; }
   .section-header { margin-bottom: 40px; }
+  .section-header-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -78,7 +81,10 @@
   .page-hero-title { font-size: clamp(1.5rem, 8vw, 2rem); }
   .page-hero-content p { font-size: 0.95rem; max-width: 100%; }
   .section-header { margin-bottom: 32px; }
-  .section-header-row { margin-bottom: 32px; }
+  .section-header-row { 
+    margin-bottom: 32px;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 480px) {
