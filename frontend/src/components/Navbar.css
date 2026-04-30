@@ -8,6 +8,23 @@
   transition: var(--transition);
 }
 
+/* Mobile menu backdrop overlay */
+.navbar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(20px);

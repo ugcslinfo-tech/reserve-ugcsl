@@ -30,9 +30,29 @@ export default function Navbar() {
 
   useEffect(() => setMenuOpen(false), [location]);
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container navbar-inner">
+    <>
+      {/* Backdrop overlay for mobile menu */}
+      <div 
+        className={`navbar-backdrop ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden="true"
+      />
+      
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="container navbar-inner">
         <Link to="/" className="navbar-logo">
           <img src={logo} alt="UGCSL Logo" className="logo-img" />
           <div className="logo-text">
@@ -72,7 +92,7 @@ export default function Navbar() {
             <span /><span /><span />
           </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
