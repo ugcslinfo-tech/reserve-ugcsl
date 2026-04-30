@@ -60,7 +60,7 @@ export default function Home() {
           </h1>
           <p className="hero-subtitle">{t('home.heroSubtitle')}</p>
           <div className="hero-actions">
-            <Link to="/admissions" className="btn btn-primary">{t('home.explorePrograms')}</Link>
+            <Link to="/programs" className="btn btn-primary">{t('home.explorePrograms')}</Link>
             <Link to="/about" className="btn btn-outline">{t('home.discoverUGCSL')}</Link>
           </div>
           {/* accreditation badge – hidden for now
@@ -154,7 +154,7 @@ export default function Home() {
                     <p className="program-desc">{isSi ? (p.description_si || p.description) : p.description}</p>
                     <div className="program-footer">
                       <span className="program-duration">⏱ {isSi ? (p.duration_si || p.duration) : p.duration}</span>
-                      <span className="program-link">{t('home.explorePrograms')} →</span>
+                      <span className="program-link">{t('home.viewProgram')} →</span>
                     </div>
                   </div>
                 </Link>
@@ -204,7 +204,7 @@ export default function Home() {
           ) : (
             <div className="grid-3">
               {news?.map((item) => (
-                <article key={item._id} className="news-card card">
+                <Link key={item._id} to={`/news/${item.slug}`} className="news-card card">
                   {item.image ? (
                     <div className="news-img-wrap">
                       <LazyImage src={item.image} alt={item.title} className="news-img" />
@@ -225,7 +225,7 @@ export default function Home() {
                       <span className="news-read">{t('home.readMore')}</span>
                     </div>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           )}
