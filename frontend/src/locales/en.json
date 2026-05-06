@@ -136,7 +136,7 @@
     "boardSubtitle": "The Board of Directors provides strategic oversight and governance for United Global Campus of Sri Lanka.",
     "board": [
       {
-        "name": "Dr. W.A.A. Sampath Indrajit",
+        "name": "Dr. W.A.A. Sampath Indrajith",
         "role": "Founder / CEO",
         "bio": "Psychological Counselor, UNPAF Peace Ambassador, Vishwa Keerthi Sri Desha Shakthi, Deshaprabhashwara Sihala Putra Gourawa, Deshamanya, Deshabandu",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ceo_kgvmys"
@@ -224,6 +224,25 @@
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/ViceChancellor_pwzbl9"
       },
       {
+        "name": "Mr. K. A. S. K. Gunaratne",
+        "role": "Dean of Cosmetology and Aesthetic Sciences",
+        "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
+      },
+      {
+        "name": "Dr. A.P.S. Anoj de Silva",
+        "role": "Dean of Indigenous Medicine",
+        "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Deshamanya Deshabandu (Honorary)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr2_t61i7k"
+      },
+      {
+        "name": "Mr. Udana Wewalagedara",
+        "role": "Visiting Lecturer",
+        "bio": "M.sc in Social Work (reading) - National Institute of Social Development, PQHRM - CIPM Sri Lanka, Higher Diploma and Diploma in Counselling Psychology - SIBA Campus - Sri Lanka, Diploma in Drug Abuse Management Studies - University of Colombo, ICAP - Prevention (ICAP - P - 039) and Recovery (ICAP - RS - 168)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/visitingLec_rd2rnt"
+      },
+
+      {
         "name": "To Be Announced",
         "role": "Dean of Law and Human Rights",
         "photo": null
@@ -233,12 +252,7 @@
         "role": "Dean of Psychology and Counselling",
         "photo": null
       },
-      {
-        "name": "Mr. K. A. S. K. Gunaratne",
-        "role": "Dean of Cosmetology and Aesthetic Sciences",
-        "bio": "Founder of Natural Beauty Workshops, Diploma Holder in Beauty Culture, Member of the Natural Beauty Forum, Managing Director of Challenge Lanka Herbal Products (Pvt) Ltd, Director of United Global University, Member of the Lanka Human Rights Organization, Internationally Certified in Natural Aloe Vera Plant and Aloe Vera Products, Sri Lankabhimani Sinhalavedi Deshamanya Traditional Physician",
-        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr4_cuzb5q"
-      },
+
       {
         "name": "To Be Announced",
         "role": "Dean of Agriculture",
@@ -248,12 +262,6 @@
         "name": "To Be Announced",
         "role": "Dean of Political Science and Public Policy",
         "photo": null
-      },
-      {
-        "name": "Mr. Udana Wewalagedara",
-        "role": "Visiting Lecturer",
-        "bio": "M.sc in Social Work (reading) - National Institute of Social Development, PQHRM - CIPM Sri Lanka, Higher Diploma and Diploma in Counselling Psychology - SIBA Campus - Sri Lanka, Diploma in Drug Abuse Management Studies - University of Colombo, ICAP - Prevention (ICAP - P - 039) and Recovery (ICAP - RS - 168)",
-        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/visitingLec_rd2rnt"
       }
     ],
     "toBeAnnounced": "To Be Announced",
