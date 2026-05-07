@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { NewsItem, PaginatedResponse } from '../types';
+import SEO from '../components/SEO';
 import './shared.css';
 import './News.css';
 
@@ -18,6 +19,11 @@ export default function News() {
 
   return (
     <main>
+      <SEO 
+        title="News & Events | UGCSL - Latest Updates"
+        description="Stay updated with the latest news, events, and achievements from United Global Campus of Sri Lanka. Read about admissions, academic updates, and campus announcements."
+        canonical="https://ugcsl.lk/news"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">

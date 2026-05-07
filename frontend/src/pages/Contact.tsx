@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { submitContact } from '../hooks/useApi';
 import type { ContactForm } from '../types';
+import SEO from '../components/SEO';
 import './shared.css';
 import './Contact.css';
 
@@ -38,6 +39,11 @@ export default function Contact() {
 
   return (
     <main>
+      <SEO 
+        title="Contact Us | UGCSL - Get in Touch"
+        description="Contact United Global Campus of Sri Lanka for admissions inquiries, program information, or general questions. We're here to help you start your educational journey."
+        canonical="https://ugcsl.lk/contact"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">

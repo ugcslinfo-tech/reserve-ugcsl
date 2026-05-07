@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import './shared.css';
 import './Research.css';
 
@@ -11,6 +12,11 @@ export default function Research() {
 
   return (
     <main>
+      <SEO 
+        title="Research | UGCSL - Building a Culture of Inquiry"
+        description="Explore UGCSL's research focus areas in Psychology, Human Rights, Business Development, and Social Development. Partner with us for collaborative research."
+        canonical="https://ugcsl.lk/research"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">

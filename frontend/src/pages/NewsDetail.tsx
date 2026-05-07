@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom';
 import { useFetch } from '../hooks/useApi';
 import type { NewsItem } from '../types';
+import SEO from '../components/SEO';
 import './shared.css';
 import './NewsDetail.css';
 
@@ -18,6 +19,11 @@ export default function NewsDetail() {
 
   return (
     <main>
+      <SEO 
+        title={`${news.title} | UGCSL News`}
+        description={news.excerpt}
+        canonical={`https://ugcsl.lk/news/${slug}`}
+      />
       {/* Hero with Image */}
       <section className="news-detail-hero">
         {news.image && (

@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { Program, PaginatedResponse } from '../types';
+import SEO from '../components/SEO';
 import './shared.css';
 import './Programs.css';
 
@@ -65,6 +66,11 @@ export default function Programs() {
 
   return (
     <main className="programs-page">
+      <SEO 
+        title="Academic Programs | UGCSL - Online Diploma Programs in Sri Lanka"
+        description="Explore UGCSL's online diploma programs in Human Rights, Psychology, Business Management, Natural Beauticulture, and Social Development. Flexible, quality education from anywhere."
+        canonical="https://ugcsl.lk/programs"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">

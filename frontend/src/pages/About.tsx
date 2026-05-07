@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import banner from '../assets/campus/banner.jpeg';
 import './shared.css';
 import './About.css';
@@ -118,6 +119,11 @@ export default function About() {
 
   return (
     <main className="about-page">
+      <SEO 
+        title="About Us | UGCSL - United Global Campus of Sri Lanka"
+        description="Learn about UGCSL's vision, mission, and commitment to accessible online higher education in Sri Lanka. Meet our board of directors, leadership team, and academic staff."
+        canonical="https://ugcsl.lk/about"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">

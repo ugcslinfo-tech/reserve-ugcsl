@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { Program, NewsItem, PaginatedResponse } from '../types';
 import LazyImage from '../components/LazyImage';
+import SEO from '../components/SEO';
 import banner from '../assets/campus/banner.jpeg';
 import './shared.css';
 import './Home.css';
@@ -41,6 +42,11 @@ export default function Home() {
 
   return (
     <main>
+      <SEO 
+        title="UGCSL – United Global Campus of Sri Lanka | Online Higher Education"
+        description="United Global Campus of Sri Lanka offers nationally recognized online diploma programs in Law, Human Rights, Cosmetology, Psychology, and more. Study from anywhere with flexible, quality education. Applications open for 2026 intake."
+        canonical="https://ugcsl.lk/"
+      />
       {/* Hero */}
       <section className="hero">
         <div className="hero-bg">

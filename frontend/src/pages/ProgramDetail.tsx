@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useFetch } from '../hooks/useApi';
 import type { Program } from '../types';
+import SEO from '../components/SEO';
 import './shared.css';
 import './ProgramDetail.css';
 
@@ -55,6 +56,11 @@ export default function ProgramDetail() {
 
   return (
     <main>
+      <SEO 
+        title={`${title} | UGCSL`}
+        description={description}
+        canonical={`https://ugcsl.lk/programs/${slug}`}
+      />
       <section className="page-hero pd-hero">
         <div className="page-hero-bg" />
         {getProgramImage(p) && <img src={getProgramImage(p)!} alt={title} className="pd-hero-img" />}

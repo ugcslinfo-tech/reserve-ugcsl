@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import FaqItem from '../components/FaqItem';
+import SEO from '../components/SEO';
 import './shared.css';
 import './Admissions.css';
 
@@ -22,6 +23,11 @@ export default function Admissions() {
 
   return (
     <main>
+      <SEO 
+        title="Admissions | UGCSL - Apply for Online Diploma Programs"
+        description="Apply to UGCSL for 2026 intake. Learn about entry requirements, application process, and deadlines for our online diploma programs. Applications now open."
+        canonical="https://ugcsl.lk/admissions"
+      />
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="container page-hero-content">
