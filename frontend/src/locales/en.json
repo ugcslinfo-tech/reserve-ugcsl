@@ -147,12 +147,7 @@
         "bio": "Vishwa Keerthi Sri Janaranjana, Vyaparavedi Nipun, Deshamanya Deshabandu (Honorary)",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr2_t61i7k"
       },
-      {
-        "name": "His Excellency Dr. B.H. Saiyadeen",
-        "role": "Director",
-        "bio": "Global Ambassador UNPAF, SL Ambassador IHPRC, SL Ambassador (Unami Buffalo Nation)",
-        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr3_zntzcr"
-      },
+      
       {
         "name": "Mr. K. A. S. K. Gunaratne",
         "role": "Director",
@@ -213,9 +208,15 @@
     "academicStaff": [
       {
         "name": "Ven. Kandakatiye Dharmarathana Thero",
-        "role": "Chancellor",
+        "role": "Grand Chancellor (cleric)",
         "bio": "Shasana Shobana, Kawya Visharadha, Bachelor of Arts, National Diploma in Teaching (Science), Trained Teacher / School Teacher",
         "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/chancellor_ocanhy"
+      },
+      {
+        "name": "His Excellency Dr. B.H. Saiyadeen",
+        "role": "Chancellor (lay)",
+        "bio": "Global Ambassador UNPAF, SL Ambassador IHPRC, SL Ambassador (Unami Buffalo Nation)",
+        "photo": "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_800/dr3_zntzcr"
       },
       {
         "name": "Ven. Ruwanpura Gnanavimala Sthavira",
