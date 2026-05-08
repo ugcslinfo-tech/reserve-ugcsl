@@ -5,7 +5,7 @@ import banner from '../assets/campus/banner.jpeg';
 import './shared.css';
 import './About.css';
 
-const roadmapYears = ['2025', '2026', '2027', '2028'];
+const roadmapYears = ['2026', '2027', '2028', '2029'];
 const CARD_GAP = 24;
 
 function getCardsPerView() {
