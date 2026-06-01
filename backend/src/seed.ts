@@ -190,7 +190,7 @@ const seedNews = [
 
 <p>We invite you to be part of this exciting journey. <a href="/about">Learn more about UGCSL</a> or <a href="/admissions">apply for our 2026 intake</a>.</p>`,
     date: new Date("2026-01-15"),
-    image: "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900/inauguration_lqfpjs",
+    image: "https://res.cloudinary.com/dxkfytlpu/image/upload/f_auto,q_auto,w_900/debut_wmtlo6",
     author: "UGCSL Communications",
   },
 ];
